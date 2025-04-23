@@ -3571,3 +3571,75 @@ select.form-select option {
   }
 }
 
+/*--------------------------------------------------------------
+  20. Schedule Calendar
+----------------------------------------------------------------*/
+.schedule-calendar {
+  background-color: #0a113a;
+  padding: 40px 43px;
+}
+.schedule-calendar.type2 {
+  padding: 0;
+}
+.schedule-calendar.background-color-remove {
+  position: relative;
+  z-index: 13;
+  background-color: transparent;
+}
+.schedule-calendar .br-routine th,
+.schedule-calendar td {
+  border: 1px dotted rgba(255, 255, 255, 0.2);
+  padding: 1px;
+  text-align: center;
+  min-width: 145px;
+  max-width: 150px;
+  height: 80px;
+  font-family: bebas neue;
+  flex-shrink: 0;
+  font-size: 20px;
+  flex-grow: 1;
+}
+.schedule-calendar .br-routine .cs-row-title {
+  border-left: none;
+  text-align: left;
+}
+.schedule-calendar .tab-content .cs-col-title {
+  border-top: none;
+}
+.schedule-calendar .tab-content .cs-col-title.one {
+  border-left: none;
+}
+.schedule-calendar .cs-item {
+  background-color: #a7d1d2;
+  margin: 4px;
+  padding: 12px 11px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+}
+.schedule-calendar .cs-item .cs-item-title {
+  font-family: var(--heading-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #0a113a  ;
+  transition: all 0.3s ease;
+}
+.schedule-calendar .cs-item .cs-item-short-title {
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #0a113a;
+  transition: all 0.3s ease;
+}
+.schedule-calendar .cs-item:hover {
+  background-color: #007BFF;
+}
+.schedule-calendar .cs-item:hover .cs-item-title {
+  color: #ffffff;
+}
+.schedule-calendar .cs-item:hover .cs-item-short-title {
+  color: #ffffff;
+}
