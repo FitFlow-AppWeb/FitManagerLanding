@@ -3643,3 +3643,505 @@ select.form-select option {
 .schedule-calendar .cs-item:hover .cs-item-short-title {
   color: #ffffff;
 }
+/*--------------------------------------------------------------
+  15. About
+----------------------------------------------------------------*/
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+.about-section .img-content {
+  display: flex;
+  flex-grow: 1;
+  max-width: 600px;
+  position: relative;
+  gap: 30px;
+  margin-top: 35px;
+}
+.about-section .img-content .img-content-one {
+  flex-basis: 50%;
+  overflow: hidden;
+  max-height: 444px;
+}
+.about-section .img-content .img-content-one .about_1 {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about-section .img-content .img-content-two {
+  flex-basis: 50%;
+  margin-top: 25px;
+}
+.about-section .img-content .img-content-two .circle {
+  position: absolute;
+  z-index: 13;
+  right: 150px;
+}
+.about-section .img-content .img-content-two .img-content-about_2 {
+  position: absolute;
+  max-height: 405px;
+  top: 100px;
+  z-index: 12;
+  overflow: hidden;
+}
+.about-section .img-content .img-content-two .img-content-about_2 .about_2 {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about-section .info-content {
+  max-width: 600px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1199px) {
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 155px;
+  }
+  .about-section .img-content {
+    bottom: 0;
+  }
+  .about-section .info-content {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .about-section .img-content {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about-section .img-content .img-content-two .circle {
+    width: 120px;
+    height: 120px;
+    right: 100px;
+  }
+}
+
+
+
+/*--------------------------------------------------------------
+  21. Feature
+----------------------------------------------------------------*/
+.feature-card {
+  perspective: 960px;
+}
+
+.info {
+  transform: rotate3d(1, 0, 0, 90deg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-color: rgba(69, 107, 246, 0.9);
+}
+
+.in-top .info {
+  transform-origin: 50% 0%;
+  animation: in-top 300ms ease 0ms 1 forwards;
+}
+
+.in-right .info {
+  transform-origin: 100% 0%;
+  animation: in-right 300ms ease 0ms 1 forwards;
+}
+
+.in-bottom .info {
+  transform-origin: 50% 100%;
+  animation: in-bottom 300ms ease 0ms 1 forwards;
+}
+
+.in-left .info {
+  transform-origin: 0% 0%;
+  animation: in-left 300ms ease 0ms 1 forwards;
+}
+
+.out-top .info {
+  transform-origin: 50% 0%;
+  animation: out-top 300ms ease 0ms 1 forwards;
+}
+
+.out-right .info {
+  transform-origin: 100% 50%;
+  animation: out-right 300ms ease 0ms 1 forwards;
+}
+
+.out-bottom .info {
+  transform-origin: 50% 100%;
+  animation: out-bottom 300ms ease 0ms 1 forwards;
+}
+
+.out-left .info {
+  transform-origin: 0% 0%;
+  animation: out-left 300ms ease 0ms 1 forwards;
+}
+
+@keyframes in-top {
+  from {
+    transform: rotate3d(-1, 0, 0, 90deg);
+  }
+  to {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@keyframes in-right {
+  from {
+    transform: rotate3d(0, -1, 0, 90deg);
+  }
+  to {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@keyframes in-bottom {
+  from {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+  to {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@keyframes in-left {
+  from {
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+  to {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@keyframes out-top {
+  from {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    transform: rotate3d(-1, 0, 0, 104deg);
+  }
+}
+@keyframes out-right {
+  from {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    transform: rotate3d(0, -1, 0, 104deg);
+  }
+}
+@keyframes out-bottom {
+  from {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    transform: rotate3d(1, 0, 0, 104deg);
+  }
+}
+@keyframes out-left {
+  from {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    transform: rotate3d(0, 1, 0, 104deg);
+  }
+}
+.feature-content {
+  display: flex;
+  flex-wrap: wrap;
+  /* &.style-2{
+
+  } */
+}
+
+.feature-content > * {
+  flex: 0 0 auto;
+  max-width: 100%;
+  width: 50%;
+}
+
+.feature-card {
+  position: relative;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+.feature-card .normal {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 50px;
+  line-height: 200px;
+}
+.feature-card .normal .text-content {
+  position: absolute;
+  bottom: 50px;
+  left: 48px;
+  max-width: 361px;
+}
+.feature-card .normal .feature-card-img {
+  width: 100%;
+}
+.feature-card .info .hover-content {
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+  max-width: 361px;
+}
+.feature-card h3 {
+  margin: 0;
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.9);
+}
+.feature-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.feature-video {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 3s ease-in-out;
+}
+@media screen and (min-width: 1025px) {
+  .feature-video .scrolling-image {
+    height: 125% !important;
+  }
+  .feature-video .scrolling-image {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+}
+.feature-video .ak-video-block {
+  position: absolute;
+}
+
+.feature-content-style-2 {
+  padding: 140px 0;
+  position: relative;
+}
+.feature-content-style-2 .feature-video-conent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.feature-content-style-2 .feature-card-content {
+  max-width: 945px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 13;
+}
+.feature-content-style-2 .feature-card.style-2 {
+  background-color: #0a113a;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+}
+.feature-content-style-2 .feature-card.style-2 .top-img {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 35px;
+}
+.feature-content-style-2 .feature-card.style-2.active {
+  background-color: #007BFF;
+}
+
+@media screen and (max-width: 1400px) {
+  .feature-content > .feature-video {
+    width: 35%;
+  }
+  .feature-content > .feature {
+    width: 65%;
+  }
+  .feature-card .normal .text-content {
+    left: 20px;
+    bottom: 20px;
+    right: 10px;
+  }
+  .feature-card .info .hover-content {
+    left: 20px;
+    bottom: 20px;
+    right: 10px;
+  }
+  .feature-video .video-img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .feature-content > .feature-video {
+    width: 100%;
+  }
+  .feature-content > .feature {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .feature-content-style-2 {
+    padding: 14px;
+  }
+  .feature-content-style-2 .feature-video-conent {
+    position: relative;
+    height: 300px;
+    width: 100%;
+  }
+  .feature-content-style-2 .feature-card.style-2 {
+    padding: 30px;
+  }
+}
+
+
+
+/*--------------------------------------------------------------
+  26. Subscribe Email
+----------------------------------------------------------------*/
+.subscribe-email {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  z-index: 12;
+}
+.subscribe-email.type2 {
+  background-color: #ffffff;
+  color: #0A113A;
+  padding: 95px 80px;
+}
+.subscribe-email.type2 .subscribe-content .subscribe-title {
+  color: #0A113A;
+}
+.subscribe-email.type2 .subscribe-form {
+  border-right: 4px solid var(--Extra, #a7d1d2);
+  border-bottom: 4px solid var(--Extra, #a7d1d2);
+  background: rgba(213, 189, 162, 0.2);
+}
+.subscribe-email.type2 .subscribe-form .email-input {
+  color: #0A113A;
+}
+.subscribe-email .subscribe-content {
+  max-width: 408px;
+}
+.subscribe-email .subscribe-content .subscribe-title {
+  text-transform: uppercase;
+}
+.subscribe-email .subscribe-form {
+  display: flex;
+  gap: 30px;
+  border-bottom: 2px solid #007BFF;
+  max-width: 600px;
+  width: 100%;
+  padding: 10px 10px 10px 20px;
+  background: #0A113A;
+}
+.subscribe-email .subscribe-form .email-input {
+  color: #ffffff;
+  background-color: transparent;
+  border: 0;
+  width: 100%;
+}
+.subscribe-email .subscribe-form .email-input:focus {
+  outline: none;
+}
+.subscribe-email .subscribe-form .submit-btn {
+  background-color: #007BFF;
+  position: relative;
+  overflow: hidden;
+  padding: 8px 13px;
+  border: 0px;
+}
+.subscribe-email .subscribe-form .submit-btn:hover .send svg {
+  transition: all 0.3s ease;
+  animation: sending 0.5s linear 0.3s forwards;
+}
+.subscribe-email.type3 {
+  position: relative;
+  flex-direction: column;
+  text-align: center;
+  background-color: #0A113A;
+  padding: 70px;
+}
+.subscribe-email.type3 .subscribe-content .subscribe-title {
+  font-size: 60px;
+  line-height: 100%;
+  margin-bottom: 15px;
+}
+.subscribe-email.type3 .subscribe-form {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+.subscribe-email.type3 .right-svg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.subscribe-email.type3 .left-svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@media screen and (max-width: 1199px) {
+  .subscribe-email {
+    justify-content: space-between;
+  }
+  .subscribe-email .subscribe-form {
+    max-width: 400px;
+  }
+  .subscribe-email.type3 {
+    padding: 70px 15px;
+  }
+  .subscribe-email.type3 .subscribe-content {
+    max-width: 100%;
+  }
+  .subscribe-email.type3 .subscribe-content .subscribe-title {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .subscribe-email {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+  .subscribe-email.type2 {
+    padding: 15px;
+  }
+  .subscribe-email .subscribe-form {
+    max-width: 100%;
+  }
+}
+@keyframes sending {
+  0% {
+    transform: translateY(0);
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    transform: translate(40px, -60px);
+  }
+}
