@@ -68,3 +68,78 @@ function stickyHeader() {
       lastScrollTop = windowTop;
     });
   }
+
+    /*--------------------------------------------------------------
+     6. Scroll Up
+--------------------------------------------------------------*/
+function scrollUp() {
+    $(".ak-scrollup").on("click", function (e) {
+      e.preventDefault();
+      $("html,body").animate(
+        {
+          scrollTop: 0,
+        },
+        0
+      );
+    });
+  }
+  // For Scroll Up
+  function showScrollUp() {
+    let scroll = $(window).scrollTop();
+    if (scroll >= 350) {
+      $(".ak-scrollup").addClass("ak-scrollup-show");
+    } else {
+      $(".ak-scrollup").removeClass("ak-scrollup-show");
+    }
+  }
+
+  /*--------------------------------------------------------------
+    7. Accordion
+ --------------------------------------------------------------*/
+  if ($.exists(".ak-accordion-title")) {
+    $(".ak-accordion-title").click(function () {
+      $(this).toggleClass("active");
+      var $accordionTab = $(this).next(".ak-accordion-tab");
+      $accordionTab.slideToggle();
+      $accordionTab
+        .parent()
+        .siblings()
+        .find(".ak-accordion-tab")
+        .slideUp()
+        .prev()
+        .removeClass("active");
+    });
+  }
+
+  /*--------------------------------------------------------------
+    8. Sticky Content
+ --------------------------------------------------------------*/
+
+  if ($.exists(".classespages-details-content.style1")) {
+    var top =
+      $("#sidebar").offset().top -
+      parseFloat($("#sidebar").css("marginTop").replace(/auto/, 0));
+    var footTop =
+      $("#footer").offset().top -
+      parseFloat($("#footer").css("marginTop").replace(/auto/, 0));
+
+    var maxY = footTop - $("#sidebar").outerHeight();
+
+    $(window).scroll(function (evt) {
+      var y = $(this).scrollTop();
+      if (y > top && $(this).innerWidth() > 991) {
+        if (y < maxY) {
+          $("#sidebar").addClass("fixed").removeAttr("style");
+        } else {
+          $("#sidebar")
+            .removeClass("fixed")
+            .css({
+              position: "absolute",
+              top: maxY - top + "px",
+            });
+        }
+      } else {
+        $("#sidebar").removeClass("fixed");
+      }
+    });
+  }
