@@ -3901,6 +3901,10 @@ select.form-select option {
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.8);
 }
+.scrolling-image {
+  padding: 1rem;
+}
+
 
 .feature-video {
   position: relative;
