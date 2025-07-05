@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="es">
 
 <head>
     <!-- Meta Tags -->
@@ -10,12 +10,39 @@
     <!-- Favicon Icon -->
     <link rel="icon" href="assets/img/logo.svg" />
     <!-- Site Title -->
-    <title>fitmanager - Fitness & Gym administration</title>
+    <title data-i18n="siteTitle">fitmanager - Fitness & Gym administration</title>
     <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/aos.css" />
     <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Tailwind CSS CDN for language selector styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the language selector */
+        .language-selector {
+            position: relative;
+            display: inline-block;
+            margin-left: 20px; /* Adjust as needed */
+        }
+
+        .language-selector select {
+            background-color: #333;
+            color: white;
+            border: 1px solid #555;
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            appearance: none; /* Remove default select arrow */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2C197.3L159.9%2C69.8c-2.9-2.9-6.9-4.5-11.2-4.5c-4.3%2C0-8.4%2C1.6-11.2%2C4.5L5.1%2C197.3c-3%2C3-4.7%2C6.9-4.7%2C11.2c0%2C4.3%2C1.7%2C8.3%2C4.7%2C11.3l17.8%2C17.7c3%2C3%2C6.9%2C4.7%2C11.3%2C4.7c4.3%2C0%2C8.3-1.7%2C11.3-4.7l120.3-120.3l120.3%2C120.3c3%2C3%2C6.9%2C4.7%2C11.3%2C4.7c4.3%2C0%2C8.3-1.7%2C11.3-4.7l17.8-17.7c3-3%2C4.7-6.9%2C4.7-11.3C291.7%2C204.2%2C290%2C200.3%2C287%2C197.3z%22%2F%3E%3C%2Fsvg%3E');
+            background-repeat: no-repeat;
+            background-position: right 0.7em top 50%, 0 0;
+            background-size: 0.65em auto, 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -33,35 +60,42 @@
                         <div class="ak-nav ak-medium">
                             <ul class="ak-nav_list">
                                 <li class="menu-item-has-children">
-                                    <a href="index.html">Home</a>
+                                    <a href="index.html" data-i18n="navHome">Home</a>
                                     <ul>
                                         <li>
-                                            <a href="index.html">Home</a>
+                                            <a href="index.html" data-i18n="navHome">Home</a>
                                         </li>
                                         <li>
-                                            <a href="index-two.html">Home Two</a>
+                                            <a href="index-two.html" data-i18n="navHomeTwo">Home Two</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="about.html">About</a>
+                                    <a href="about.html" data-i18n="navAbout">About</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="schedule.html">Muestra</a>
+                                    <a href="schedule.html" data-i18n="navSchedule">Muestra</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="pricing.html">Planes</a>
+                                    <a href="pricing.html" data-i18n="navPlans">Planes</a>
                                 </li>
                                 <li>
-                                    <a href="contact-us.html">Contáctanos</a>
+                                    <a href="contact-us.html" data-i18n="navContact">Contact</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="ak-main-header-right">
-                        <a href="https://fitmanager-c2b2a.web.app/" class="button-primary">
+                        <a href="https://fitmanager-c2b2a.web.app/" class="button-primary" data-i18n="joinUsButton">
                             UNETE
                         </a>
+                        <!-- Language Selector -->
+                        <div class="language-selector">
+                            <select id="language-switcher" onchange="setLanguage(this.value)">
+                                <option value="es">Español</option>
+                                <option value="en">English</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -74,14 +108,14 @@
         <div class="container">
             <div class="ak-errorpage-content">
                 <div class="error-logo">
-                    <img src="assets/img/error-logo.png" alt="..."> 
+                    <img src="assets/img/error-logo.png" alt="...">
                 </div>
                 <div class="error-content">
-                    <h1 class="error-title">Oops! PAGINA NO ENCONTRADA</h1>
-                    <p class="error-desp">No te preocupes, incluso los mejores atletas tropiezan de vez en cuando. Parece que la página que estás buscando no existe. Pero no dejes que eso te detenga en tu camino hacia tus metas de fitness.
+                    <h1 class="error-title" data-i18n="errorTitle">Oops! PAGINA NO ENCONTRADA</h1>
+                    <p class="error-desp" data-i18n="errorDescription">No te preocupes, incluso los mejores atletas tropiezan de vez en cuando. Parece que la página que estás buscando no existe. Pero no dejes que eso te detenga en tu camino hacia tus metas de fitness.
                     </p>
                     <div class="error-btn-content">
-                        <a href="index.html" class="button-primary color2">
+                        <a href="index.html" class="button-primary color2" data-i18n="backToHomeButton">
                             <span class="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 17 20"
                                     fill="none">
@@ -99,7 +133,6 @@
                                 </svg>
                             </span>
                             VOLVER A HOME
-
                         </a>
                     </div>
                 </div>
@@ -107,73 +140,71 @@
         </div>
     </section>
 
-  <!-- Start Footer -->
-  <div class="ak-height-135 ak-height-lg-80"></div>
-  <footer class="footer">
-      <img src="assets/img/footer_bg_light.png" class="footer_bg_light" alt="...">
-      <div class="border-footer-1"></div>
-      <div class="container">
-          <div class="footer style-1">
-              <!-- <div class="border-footer-1"></div> -->
-              <div class="location-contact">
-                <h5 class="title">UBICACIÓN & CONTACTO</h5>
-                <p class="address"><span>UBICACIÓN:</span> Santo Toribio de Mogrovejo 133,
-                    <br> Collique, Comas, Perú
-                </p>
-                <a href="mailto:example@email.com" class="email"><span>Email:</span> contacto@fitmanager.com.pe</a>
-                <p><span class="time">Horario de Atención:</span> Lunes-Sabado: 24/7</p>
-            </div>
-
-            <div class="link-social">
-                <div class="link">
-                    <h5 class="title">CONOCENOS</h5>
-                    <a href="about.html">Nosotros</a>
-                    <a href="pricing.html">Planes</a>
-                    <a href="contact-us.html">Contactanos</a>
+    <!-- Start Footer -->
+    <div class="ak-height-135 ak-height-lg-80"></div>
+    <footer class="footer">
+        <img src="assets/img/footer_bg_light.png" class="footer_bg_light" alt="...">
+        <div class="border-footer-1"></div>
+        <div class="container">
+            <div class="footer style-1">
+                <div class="location-contact">
+                    <h5 class="title" data-i18n="footerLocationContactTitle">UBICACIÓN & CONTACTO</h5>
+                    <p class="address"><span data-i18n="footerLocationLabel">UBICACIÓN:</span> Santo Toribio de Mogrovejo 133,
+                        <br> <span data-i18n="footerAddressDetails">Collique, Comas, Perú</span>
+                    </p>
+                    <a href="mailto:example@email.com" class="email"><span data-i18n="footerEmailLabel">Email:</span> contacto@fitmanager.com.pe</a>
+                    <p><span class="time" data-i18n="footerHoursLabel">Horario de Atención:</span> <span data-i18n="footerHoursDetails">Lunes-Sabado: 24/7</span></p>
                 </div>
-                <div class="social">
-                    <h5 class="title">SOCIAL</h5>
-                    <a href="https://www.facebook.com/">Facebook</a>
-                    <a href="https://www.instagram.com/">Instagram</a>
-                    <a href="https://www.tiktok.com/">Tiktok</a>
-                    <a href="https://x.com/">Twitter</a>
+
+                <div class="link-social">
+                    <div class="link">
+                        <h5 class="title" data-i18n="footerKnowUsTitle">CONOCENOS</h5>
+                        <a href="about.html" data-i18n="footerAboutUs">Nosotros</a>
+                        <a href="pricing.html" data-i18n="footerPlans">Planes</a>
+                        <a href="contact-us.html" data-i18n="footerContactUs">Contactanos</a>
+                    </div>
+                    <div class="social">
+                        <h5 class="title" data-i18n="footerSocialTitle">SOCIAL</h5>
+                        <a href="https://www.facebook.com/">Facebook</a>
+                        <a href="https://www.instagram.com/">Instagram</a>
+                        <a href="https://www.tiktok.com/">Tiktok</a>
+                        <a href="https://x.com/">Twitter</a>
+                    </div>
+                </div>
+
+                <div class="logo-footer">
+                    <div class="logo">
+                        <img src="assets/img/logo.svg" alt="logo">
+                    </div>
+                    <p class="desp" data-i18n="footerDescription">La gestión de tu gimnasio nunca fue tan fácil. Con nuestra plataforma, administras pagos, membresías y mucho más con solo unos clics.</p>
+                    <a href="tel:(406)5550120" class="phone">
+                        <span class="icon">
+                            <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20.0137" r="20" fill="#F67A45" />
+                                <g clip-path="url(#clip0_2083_46035324)">
+                                    <path
+                                        d="M26.7162 22.5158C25.7366 22.5158 24.7748 22.3626 23.8633 22.0614C23.4167 21.9091 22.8676 22.0488 22.595 22.3288L20.796 23.6869C18.7096 22.5732 17.4245 21.2884 16.326 19.2177L17.6441 17.4655C17.9865 17.1235 18.1094 16.624 17.9622 16.1552C17.6597 15.239 17.506 14.2776 17.506 13.2976C17.5061 12.5896 16.9301 12.0137 16.2222 12.0137H13.2839C12.576 12.0137 12 12.5896 12 13.2975C12 21.4121 18.6016 28.0137 26.7162 28.0137C27.4241 28.0137 28 27.4377 28 26.7298V23.7997C28 23.0918 27.424 22.5158 26.7162 22.5158Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2083_46035324">
+                                        <rect width="16" height="16" fill="white" transform="translate(12 12.0137)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </span>
+                        <h3 class="title">(51) 998 265 700</h3>
+                    </a>
                 </div>
             </div>
-
-              <div class="logo-footer">
-                  <div class="logo">
-                      <img src="assets/img/logo.svg" alt="logo">
-                  </div>
-                  <p class="desp">La gestión de tu gimnasio nunca fue tan fácil. Con nuestra plataforma, administras pagos, membresías y mucho más con solo unos clics.</p>
-                  <a href="tel:(406)5550120" class="phone">
-                      <span class="icon">
-                          <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <circle cx="20" cy="20.0137" r="20" fill="#F67A45" />
-                              <g clip-path="url(#clip0_2083_46035324)">
-                                  <path
-                                      d="M26.7162 22.5158C25.7366 22.5158 24.7748 22.3626 23.8633 22.0614C23.4167 21.9091 22.8676 22.0488 22.595 22.3288L20.796 23.6869C18.7096 22.5732 17.4245 21.2884 16.326 19.2177L17.6441 17.4655C17.9865 17.1235 18.1094 16.624 17.9622 16.1552C17.6597 15.239 17.506 14.2776 17.506 13.2976C17.5061 12.5896 16.9301 12.0137 16.2222 12.0137H13.2839C12.576 12.0137 12 12.5896 12 13.2975C12 21.4121 18.6016 28.0137 26.7162 28.0137C27.4241 28.0137 28 27.4377 28 26.7298V23.7997C28 23.0918 27.424 22.5158 26.7162 22.5158Z"
-                                      fill="white" />
-                              </g>
-                              <defs>
-                                  <clipPath id="clip0_2083_46035324">
-                                      <rect width="16" height="16" fill="white" transform="translate(12 12.0137)" />
-                                  </clipPath>
-                              </defs>
-                          </svg>
-                      </span>
-                      <h3 class="title">(51) 998 265 700</h3>
-                  </a>
-              </div>
-          </div>
-      </div>
-      <div class="border-footer-2"></div>
-      <div class="copyright-text">
-          <p>Copyright 2024, All Right reserved</p>
-      </div>
-  </footer>
-  <!-- End Footer -->
-
+        </div>
+        <div class="border-footer-2"></div>
+        <div class="copyright-text">
+            <p data-i18n="copyright">Copyright 2024, All Right reserved</p>
+        </div>
+    </footer>
+    <!-- End Footer -->
 
     <span class="ak-scrollup">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -204,6 +235,152 @@
     <script src="assets/js/plugins/lightgallery.min.js"></script>
     <script src="assets/js/plugins/swiper.min.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+        // Translation data
+        const translations = {
+            es: {
+                siteTitle: "fitmanager - Administración de Fitness y Gimnasios",
+                navHome: "Inicio",
+                navHomeTwo: "Inicio Dos",
+                navAbout: "Nosotros",
+                navSchedule: "Muestra",
+                navPlans: "Planes",
+                navContact: "Contacto",
+                joinUsButton: "ÚNETE",
+                pageTitlePlans: "PLANES",
+                homeBreadcrumb: "Inicio",
+                plansBreadcrumb: "PLANES",
+                monthly: "Mensual",
+                basicPlanTitle: "Plan Básico",
+                basicFeature1: "Acceso a la gestión de membresías de los clientes",
+                basicFeature2: "Control de asistencia de los miembros",
+                basicFeature3: "Reportes de rendimiento y estadísticas básicas",
+                basicFeature4: "Control básico de pagos y facturación",
+                advancedPlanTitle: "Plan Avanzado",
+                advancedFeature1: "Gestión avanzada de clientes y miembros",
+                advancedFeature2: "Acceso a reportes detallados de ventas y ganancias",
+                advancedFeature3: "Herramientas de análisis de comportamiento de clientes",
+                advancedFeature4: "Gestión avanzada de pagos y facturación recurrente",
+                advancedFeature5: "Gestión de promociones y descuentos para clientes",
+                premiumPlanTitle: "Plan Premium",
+                premiumFeature1: "Gestión total de membresías, pagos y asistencia",
+                premiumFeature2: "Reportes completos y análisis de crecimiento",
+                premiumFeature3: "Acceso a estadísticas avanzadas y herramientas de marketing",
+                premiumFeature4: "Soporte personalizado para la gestión de tu gimnasio",
+                premiumFeature5: "Consultoría para optimizar la rentabilidad de tu gimnasio",
+                choosePlanButton: "ELIGE TU PLAN",
+                slidingText1: "Optimiza la gestión de tu gimnasio",
+                slidingText2: "Incrementa tus ganancias",
+                slidingText3: "Facilita la administración",
+                slidingText4: "Maximiza la experiencia de tus miembros",
+                slidingText5: "Gestiona todo desde un solo lugar",
+                slidingText6: "Control total sobre pagos y membresías",
+                slidingText7: "Revoluciona tu gimnasio hoy mismo",
+                footerLocationContactTitle: "UBICACIÓN & CONTACTO",
+                footerLocationLabel: "UBICACIÓN:",
+                footerAddressDetails: "Collique, Comas, Perú",
+                footerEmailLabel: "Email:",
+                footerHoursLabel: "Horario de Atención:",
+                footerHoursDetails: "Lunes-Sábado: 24/7",
+                footerKnowUsTitle: "CONÓCENOS",
+                footerAboutUs: "Nosotros",
+                footerPlans: "Planes",
+                footerContactUs: "Contáctanos",
+                footerSocialTitle: "SOCIAL",
+                footerDescription: "La gestión de tu gimnasio nunca fue tan fácil. Con nuestra plataforma, administras pagos, membresías y mucho más con solo unos clics.",
+                copyright: "Copyright 2024, Todos los derechos reservados",
+                // New translations for the error page
+                errorTitle: "¡Oops! PÁGINA NO ENCONTRADA",
+                errorDescription: "No te preocupes, incluso los mejores atletas tropiezan de vez en cuando. Parece que la página que estás buscando no existe. Pero no dejes que eso te detenga en tu camino hacia tus metas de fitness.",
+                backToHomeButton: "VOLVER A INICIO"
+            },
+            en: {
+                siteTitle: "fitmanager - Fitness & Gym administration",
+                navHome: "Home",
+                navHomeTwo: "Home Two",
+                navAbout: "About",
+                navSchedule: "Schedule",
+                navPlans: "Plans",
+                navContact: "Contact",
+                joinUsButton: "JOIN US",
+                pageTitlePlans: "PLANS",
+                homeBreadcrumb: "Home",
+                plansBreadcrumb: "PLANS",
+                monthly: "Monthly",
+                basicPlanTitle: "Basic Plan",
+                basicFeature1: "Access to customer membership management",
+                basicFeature2: "Member attendance tracking",
+                basicFeature3: "Basic performance reports and statistics",
+                basicFeature4: "Basic payment and billing control",
+                advancedPlanTitle: "Advanced Plan",
+                advancedFeature1: "Advanced client and member management",
+                advancedFeature2: "Access to detailed sales and profit reports",
+                advancedFeature3: "Customer behavior analysis tools",
+                advancedFeature4: "Advanced payment and recurring billing management",
+                advancedFeature5: "Promotion and discount management for clients",
+                premiumPlanTitle: "Premium Plan",
+                premiumFeature1: "Total membership, payment, and attendance management",
+                premiumFeature2: "Comprehensive reports and growth analysis",
+                premiumFeature3: "Access to advanced statistics and marketing tools",
+                premiumFeature4: "Personalized support for your gym management",
+                premiumFeature5: "Consulting to optimize your gym's profitability",
+                choosePlanButton: "CHOOSE YOUR PLAN",
+                slidingText1: "Optimize your gym management",
+                slidingText2: "Increase your profits",
+                slidingText3: "Facilitate administration",
+                slidingText4: "Maximize your members' experience",
+                slidingText5: "Manage everything from one place",
+                slidingText6: "Total control over payments and memberships",
+                slidingText7: "Revolutionize your gym today",
+                footerLocationContactTitle: "LOCATION & CONTACT",
+                footerLocationLabel: "LOCATION:",
+                footerAddressDetails: "Collique, Comas, Peru",
+                footerEmailLabel: "Email:",
+                footerHoursLabel: "Opening Hours:",
+                footerHoursDetails: "Monday-Saturday: 24/7",
+                footerKnowUsTitle: "ABOUT US",
+                footerAboutUs: "About Us",
+                footerPlans: "Plans",
+                footerContactUs: "Contact Us",
+                footerSocialTitle: "SOCIAL",
+                footerDescription: "Managing your gym has never been easier. With our platform, you manage payments, memberships, and much more with just a few clicks.",
+                copyright: "Copyright 2024, All Rights Reserved",
+                // New translations for the error page
+                errorTitle: "Oops! PAGE NOT FOUND",
+                errorDescription: "Don't worry, even the best athletes stumble sometimes. It seems the page you are looking for does not exist. But don't let that stop you on your way to your fitness goals.",
+                backToHomeButton: "BACK TO HOME"
+            }
+        };
+
+        // Function to set the language
+        function setLanguage(lang) {
+            // Update the lang attribute of the html tag
+            document.documentElement.lang = lang;
+
+            // Update all elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+
+            // Update the site title in the <title> tag
+            const titleElement = document.querySelector('title');
+            if (titleElement && translations[lang] && translations[lang]['siteTitle']) {
+                titleElement.textContent = translations[lang]['siteTitle'];
+            }
+        }
+
+        // Set default language on page load (e.g., from browser preference or 'es')
+        document.addEventListener('DOMContentLoaded', () => {
+            const userLang = navigator.language.split('-')[0]; // Get browser's language (e.g., 'es', 'en')
+            const initialLang = translations[userLang] ? userLang : 'es'; // Default to Spanish if browser language not found
+            document.getElementById('language-switcher').value = initialLang;
+            setLanguage(initialLang);
+        });
+    </script>
 </body>
 
 </html>

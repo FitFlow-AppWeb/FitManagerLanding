@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="es">
 
 <head>
     <!-- Meta Tags -->
@@ -10,59 +10,101 @@
     <!-- Favicon Icon -->
     <link rel="icon" href="assets/img/logo.svg" />
     <!-- Site Title -->
-    <title>Gymflow - Fitness & Gym administration </title>
+    <title data-i18n="siteTitle">fitmanager - Fitness & Gym administration</title>
     <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/aos.css" />
     <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    
+    <!-- Tailwind CSS CDN for language selector styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the language selector */
+        .language-selector {
+            position: relative;
+            display: inline-block;
+            margin-left: 20px;
+            /* Adjust as needed */
+        }
+
+        .language-selector select {
+            background-color: #333;
+            color: white;
+            border: 1px solid #555;
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            appearance: none;
+            /* Remove default select arrow */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2C197.3L159.9%2C69.8c-2.9-2.9-6.9-4.5-11.2-4.5c-4.3%2C0-8.4%2C1.6-11.2%2C4.5L5.1%2C197.3c-3%2C3-4.7%2C6.9-4.7%2C11.2c0%2C4.3%2C1.7%2C8.3%2C4.7%2C11.3l17.8%2C17.7c3%2C3%2C6.9%2C4.7%2C11.3%2C4.7c4.3%2C0%2C8.3-1.7%2C11.3-4.7l120.3-120.3l120.3%2C120.3c3%2C3%2C6.9%2C4.7%2C11.3%2C4.7c4.3%2C0%2C8.3-1.7%2C11.3-4.7l17.8-17.7c3-3%2C4.7-6.9%2C4.7-11.3C291.7%2C204.2%2C290%2C200.3%2C287%2C197.3z%22%2F%3E%3C%2Fsvg%3E');
+            background-repeat: no-repeat;
+            background-position: right 0.7em top 50%, 0 0;
+            background-size: 0.65em auto, 100%;
+        }
+    </style>
 </head>
 
 <body>
 
-
-   <!-- Start Header Section -->
-   <header class="ak-site_header ak-style1 ak-sticky_header">
-    <div class="ak-main_header">
-        <div class="container">
-            <div class="ak-main_header_in">
-                <div class="ak-main-header-left">
-                    <a class="ak-site_branding" href="index.html">
-                        <img src="assets/img/logo.svg" alt="...">
-                    </a>
-                </div>
-                <div class="ak-main-header-center">
-                    <div class="ak-nav ak-medium">
-                        <ul class="ak-nav_list">    
-                            <li class="menu-item-has-children">
-                                <a href="index.html">Home</a>
-                            </li>
-                            <li>
-                                <a href="about.html">Sobre nosotros</a>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="schedule.html">Muestra</a>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="pricing.html">Planes</a>
-                            </li>
-                            <li>
-                                <a href="contact-us.html">Contactanos</a>
-                            </li>
-                        </ul>
+    <!-- Start Header Section -->
+    <header class="ak-site_header ak-style1 ak-sticky_header">
+        <div class="ak-main_header">
+            <div class="container">
+                <div class="ak-main_header_in">
+                    <div class="ak-main-header-left">
+                        <a class="ak-site_branding" href="index.html">
+                            <img src="assets/img/logo.svg" alt="...">
+                        </a>
                     </div>
-                </div>
-                <div class="ak-main-header-right">
-                        <a href="https://fitmanager-c2b2a.web.app/" class="button-primary">
-                        ¡IMPULSA TU GIMNASIO!
-                    </a>
+                    <div class="ak-main-header-center">
+                        <div class="ak-nav ak-medium">
+                            <ul class="ak-nav_list">
+                                <li class="menu-item-has-children">
+                                    <a href="index.html" data-i18n="navHome">Home</a>
+                                    <ul>
+                                        <li>
+                                            <a href="index.html" data-i18n="navHome">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="index-two.html" data-i18n="navHomeTwo">Home Two</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="about.html" data-i18n="navAbout">Sobre nosotros</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="schedule.html" data-i18n="navSchedule">Muestra</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="pricing.html" data-i18n="navPlans">Planes</a>
+                                </li>
+                                <li>
+                                    <a href="contact-us.html" data-i18n="navContact">Contáctanos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ak-main-header-right">
+                        <a href="https://fitmanager-c2b2a.web.app/" class="button-primary" data-i18n="boostGymButton">
+                            ¡IMPULSA TU GIMNASIO!
+                        </a>
+                        <!-- Language Selector -->
+                        <div class="language-selector">
+                            <select id="language-switcher" onchange="setLanguage(this.value)">
+                                <option value="es">Español</option>
+                                <option value="en">English</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
-<!-- End Header Section -->
+    </header>
+    <!-- End Header Section -->
 
     <!-- Start Hero -->
     <div class="slider slider_hero_2">
@@ -72,21 +114,21 @@
                     <img src="assets/img/hero_slider_bg_4.png" class="ak-hero-bg ak-bg object-cover" alt="...">
                     <div class="hero-content-2">
                         <div class="hero-stroke-text">
-                            <h2 class="stroke-text hero-stroke-text-one" data-swiper-parallax="300">
-                                IMPULSA 
-
+                            <h2 class="stroke-text hero-stroke-text-one" data-swiper-parallax="300" data-i18n="heroStrokeTextOne">
+                                IMPULSA
                             </h2>
-                            <h2 class="stroke-text hero-stroke-text-two" data-swiper-parallax="100">
-                                TU GIMNASIO 
+                            <h2 class="stroke-text hero-stroke-text-two" data-swiper-parallax="100" data-i18n="heroStrokeTextTwo">
+                                TU GIMNASIO
                             </h2>
-                            <h2 class="hero-title-three" data-swiper-parallax="200">
+                            <h2 class="hero-title-three" data-swiper-parallax="200" data-i18n="heroTitleThree">
                                 Y LLEGA A MÁS CLIENTES
                             </h2>
                         </div>
-                        <p class="hero-desp" data-swiper-parallax="400">Descubre cómo nuestro sistema de administración de gimnasios puede ayudarte a gestionar, optimizar y hacer crecer tu negocio. ¡Únete hoy y mejora tu gimnasio con herramientas innovadoras!
+                        <p class="hero-desp" data-swiper-parallax="400" data-i18n="heroDescriptionOne">
+                            Descubre cómo nuestro sistema de administración de gimnasios puede ayudarte a gestionar, optimizar y hacer crecer tu negocio. ¡Únete hoy y mejora tu gimnasio con herramientas innovadoras!
                         </p>
                         <div data-aos="fade-up" data-swiper-parallax="100">
-                            <a href="pricing.html" class="button-primary">
+                            <a href="pricing.html" class="button-primary" data-i18n="joinNowButton">
                                 UNETE AHORA
                                 <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="20"
                                         viewBox="0 0 16 20" fill="none">
@@ -113,20 +155,21 @@
                     <img src="assets/img/hero_slider_bg_5.png" class="ak-hero-bg ak-bg object-cover" alt="...">
                     <div class="hero-content-2">
                         <div class="hero-stroke-text">
-                            <h2 class="stroke-text hero-stroke-text-one" data-swiper-parallax="300">
+                            <h2 class="stroke-text hero-stroke-text-one" data-swiper-parallax="300" data-i18n="heroStrokeTextOneAlt">
                                 IMPULSA TU GIMNASIO
                             </h2>
-                            <h2 class="stroke-text hero-stroke-text-two" data-swiper-parallax="100">
+                            <h2 class="stroke-text hero-stroke-text-two" data-swiper-parallax="100" data-i18n="heroStrokeTextTwoAlt">
                                 Y LLEGA A MÁS CLIENTES
                             </h2>
-                            <h2 class="hero-title-three" data-swiper-parallax="200">
+                            <h2 class="hero-title-three" data-swiper-parallax="200" data-i18n="heroTitleThreeAlt">
                                 ÚNETE A NUESTRA COMUNIDAD
                             </h2>
                         </div>
-                        <p class="hero-desp" data-swiper-parallax="400"> Nuestro sistema de gestión para gimnasios está diseñado para facilitar el control de tu negocio y ayudarte a atraer más miembros. ¡Actúa ahora y transforma tu gimnasio!
+                        <p class="hero-desp" data-swiper-parallax="400" data-i18n="heroDescriptionTwo">
+                            Nuestro sistema de gestión para gimnasios está diseñado para facilitar el control de tu negocio y ayudarte a atraer más miembros. ¡Actúa ahora y transforma tu gimnasio!
                         </p>
                         <div data-aos="fade-up" data-aos-delay="600">
-                            <a href="classes.html" class="button-primary">
+                            <a href="classes.html" class="button-primary" data-i18n="joinNowButton">
                                 UNETE AHORA
                                 <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="20"
                                         viewBox="0 0 16 20" fill="none">
@@ -173,58 +216,59 @@
             <div class="moving-section-in">
                 <div class="moving-section">
                     <h4 class="moving-text">
-                        <span> ¡Impulsa tu gimnasio! </span>
+                        <span data-i18n="slidingTextIndex1"> ¡Impulsa tu gimnasio! </span>
                         <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span> ¡No te quedes atrás!</span>
+                        <span data-i18n="slidingTextIndex2"> ¡No te quedes atrás!</span>
                         <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span>¡Haz crecer tu negocio hoy!</span>
+                        <span data-i18n="slidingTextIndex3">¡Haz crecer tu negocio hoy!</span>
                         <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span>¡Impulsa tu gimnasio! </span>
+                        <span data-i18n="slidingTextIndex1"> ¡Impulsa tu gimnasio! </span>
                         <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span>¡No te quedes atrás!</span>
+                        <span data-i18n="slidingTextIndex2"> ¡No te quedes atrás!</span>
                         <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span>¡Haz crecer tu negocio hoy!</span>
+                        <span data-i18n="slidingTextIndex3">¡Haz crecer tu negocio hoy!</span>
                         <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span>¡Impulsa tu gimnasio! </span>
+                        <span data-i18n="slidingTextIndex1"> ¡Impulsa tu gimnasio! </span>
                         <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span>¡No te quedes atrás!</span>
-
+                        <span data-i18n="slidingTextIndex2"> ¡No te quedes atrás!</span>
                     </h4>
                 </div>
                 <div class="moving-section">
-                    <h4 class="moving-text"><span> ¡Impulsa tu gimnasio!  </span>
+                    <h4 class="moving-text">
+                        <span data-i18n="slidingTextIndex1"> ¡Impulsa tu gimnasio! </span>
                         <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span> ¡No te quedes atrás!</span>
+                        <span data-i18n="slidingTextIndex2"> ¡No te quedes atrás!</span>
                         <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span>¡Haz crecer tu negocio hoy!</span>
+                        <span data-i18n="slidingTextIndex3">¡Haz crecer tu negocio hoy!</span>
                         <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span>Impulsa tu gimnasio!  </span>
+                        <span data-i18n="slidingTextIndex1"> ¡Impulsa tu gimnasio! </span>
                         <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span>¡No te quedes atrás!</span>
+                        <span data-i18n="slidingTextIndex2"> ¡No te quedes atrás!</span>
                         <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span>¡Haz crecer tu negocio hoy!</span>
+                        <span data-i18n="slidingTextIndex3">¡Haz crecer tu negocio hoy!</span>
                         <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span>¡Impulsa tu gimnasio!</span>
+                        <span data-i18n="slidingTextIndex1"> ¡Impulsa tu gimnasio! </span>
                         <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span>¡No te quedes atrás!</span>
+                        <span data-i18n="slidingTextIndex2"> ¡No te quedes atrás!</span>
                     </h4>
                 </div>
                 <div class="moving-section">
-                    <h4 class="moving-text"><span> ¡Impulsa tu gimnasio!  </span>
+                    <h4 class="moving-text">
+                        <span data-i18n="slidingTextIndex1"> ¡Impulsa tu gimnasio! </span>
                         <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span> ¡No te quedes atrás!</span>
+                        <span data-i18n="slidingTextIndex2"> ¡No te quedes atrás!</span>
                         <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span>¡Haz crecer tu negocio hoy!</span>
+                        <span data-i18n="slidingTextIndex3">¡Haz crecer tu negocio hoy!</span>
                         <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span>Impulsa tu gimnasio!  </span>
+                        <span data-i18n="slidingTextIndex1"> ¡Impulsa tu gimnasio! </span>
                         <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span>¡No te quedes atrás!</span>
+                        <span data-i18n="slidingTextIndex2"> ¡No te quedes atrás!</span>
                         <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span>¡Haz crecer tu negocio hoy!</span>
+                        <span data-i18n="slidingTextIndex3">¡Haz crecer tu negocio hoy!</span>
                         <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span>¡Impulsa tu gimnasio!</span>
+                        <span data-i18n="slidingTextIndex1"> ¡Impulsa tu gimnasio! </span>
                         <span><img src="assets/img/next.svg" alt="next-arrow"></span>
-                        <span>¡No te quedes atrás!</span>
+                        <span data-i18n="slidingTextIndex2"> ¡No te quedes atrás!</span>
                     </h4>
                 </div>
             </div>
@@ -233,122 +277,118 @@
             <div class="moving-section-in">
                 <div class="moving-section slide-left">
                     <h4 class="moving-text">
-                        <span>Gestiona tu gimnasio con facilidad</span>
+                        <span data-i18n="slidingTextIndex4">Gestiona tu gimnasio con facilidad</span>
                         <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
-                        <span>Mejora cada día</span>
+                        <span data-i18n="slidingTextIndex5">Mejora cada día</span>
                         <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
-                        <span>Más eficiente con cada clic</span>
+                        <span data-i18n="slidingTextIndex6">Más eficiente con cada clic</span>
                         <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
-                        <span>Optimiza tus procesos</span>
+                        <span data-i18n="slidingTextIndex7">Optimiza tus procesos</span>
                         <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
-                        <span>Transforma la gestión de tu gimnasio</span>
+                        <span data-i18n="slidingTextIndex8">Transforma la gestión de tu gimnasio</span>
                     </h4>
                 </div>
                 <div class="moving-section slide-left">
                     <h4 class="moving-text">
-                        <span>Gestiona tu gimnasio con facilidad</span>
+                        <span data-i18n="slidingTextIndex4">Gestiona tu gimnasio con facilidad</span>
                         <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
-                        <span>Mejora cada día</span>
+                        <span data-i18n="slidingTextIndex5">Mejora cada día</span>
                         <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
-                        <span>Más eficiente con cada clic</span>
+                        <span data-i18n="slidingTextIndex6">Más eficiente con cada clic</span>
                         <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
-                        <span>Optimiza tus procesos</span>
+                        <span data-i18n="slidingTextIndex7">Optimiza tus procesos</span>
                         <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
-                        <span>Transforma la gestión de tu gimnasio</span>
+                        <span data-i18n="slidingTextIndex8">Transforma la gestión de tu gimnasio</span>
                     </h4>
                 </div>
                 <div class="moving-section slide-left">
                     <h4 class="moving-text">
-                        <span>Gestiona tu gimnasio con facilidad</span>
+                        <span data-i18n="slidingTextIndex4">Gestiona tu gimnasio con facilidad</span>
                         <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
-                        <span>Mejora cada día</span>
+                        <span data-i18n="slidingTextIndex5">Mejora cada día</span>
                         <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
-                        <span>Más eficiente con cada clic</span>
+                        <span data-i18n="slidingTextIndex6">Más eficiente con cada clic</span>
                         <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
-                        <span>Optimiza tus procesos</span>
+                        <span data-i18n="slidingTextIndex7">Optimiza tus procesos</span>
                         <span><img src="assets/img/next-black.svg" alt="next-arrow"></span>
-                        <span>Transforma la gestión de tu gimnasio</span>
+                        <span data-i18n="slidingTextIndex8">Transforma la gestión de tu gimnasio</span>
                     </h4>
-                </div>
-            </div>
-        </div>
-        
                 </div>
             </div>
         </div>
     </div>
     <!-- End Hero -->
 
-      <!-- Start About -->
-      <div class="ak-height-135 ak-height-lg-80"></div>
-      <section class="container">
-          <div class="about-section">
-              <div class="img-content" data-aos="fade-left">
-                  <div class="img-content-one image-hover-animation">
-                      <img src="assets/img/about_1.jpg" class="about_1" alt="...">
-                  </div>
-                  <div class="img-content-two">
-                      <img src="assets/img/circle.png" class="circle" alt="...">
-                      <div class="img-content-about_2 image-hover-animation">
-                          <img src="assets/img/about_2.jpg" class="about_2" alt="...">
-                      </div>
-                  </div>
-              </div>
-              <div class="info-content" data-aos="fade-right">
-                  <div class="section-heading style-1">
-                      <div class="section-subtitle">Sobre nosotros</div>
-                      <h2 class="section-title">
-                          Donde el Fitness y la Gestión se Encuentran
-                      </h2>
-                      <h2 class="stroke-text" data-text="¡Exclusividad!">
-                          ¡Exclusividad!
-                      </h2>
-                      <p class="section-short-desp mt-2">
-                          En nuestra plataforma de administración de gimnasios, ayudamos a los dueños de gimnasios a optimizar sus operaciones diarias, gestionar mejor sus recursos y aumentar la rentabilidad de sus negocios. Con herramientas avanzadas y un soporte dedicado, ofrecemos soluciones que van desde la gestión de miembros hasta el seguimiento del rendimiento, asegurando que tu gimnasio opere de manera eficiente y rentable.
-                      </p>
-                  </div>
-                  <!-- Start Faq -->
-                  <div class="ak-height-40 ak-height-lg-40"></div>
-                  <div class="ak-accordion">
-                      <div class="ak-accordion-item">
-                          <div class="ak-accordion-title">
-                              <h5><span>01.</span>puedo optimizar la gestión de mi gimnasio?</h5>
-                          </div>
-                          <div class="ak-accordion-tab">
-                              Te ofrecemos herramientas para gestionar miembros, horarios, pagos, y más, todo desde una plataforma centralizada que reduce el trabajo manual y aumenta la eficiencia operativa.
-                      </div>
-                      </div>
-                      <div class="ak-accordion-item">
-                          <div class="ak-accordion-title">
-                              <h5><span>02.</span>¿Qué tipo de soporte ofrecen?</h5>
-                          </div>
-                          <div class="ak-accordion-tab">
-                              Ofrecemos soporte personalizado para resolver cualquier duda o problema técnico. Nuestro equipo está disponible para asistirte en todo momento para que tu gimnasio funcione sin problemas.
-                          </div>
-                      </div>
-                      <div class="ak-accordion-item">
-                          <div class="ak-accordion-title">
-                              <h5><span>03.</span>¿Cómo puedo mejorar la experiencia de mis miembros?</h5>
-                          </div>
-                          <div class="ak-accordion-tab">
-                              Nuestra plataforma te permite gestionar clases, crear horarios personalizados, y ofrecer un seguimiento continuo del progreso de tus miembros, lo que mejora su experiencia y satisfacción.
-                      </div>
-                      </div>
-                      <div class="ak-accordion-item">
-                          <div class="ak-accordion-title">
-                              <h5><span>04.</span>¿Puedo usar la plataforma si soy nuevo en la gestión de gimnasios?</h5>
-                          </div>
-                          <div class="ak-accordion-tab">
-                              Claro que sí. Nuestro sistema es fácil de usar y está diseñado tanto para nuevos propietarios de gimnasios como para expertos, con soporte disponible en cada paso.
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <!-- End Faq -->
-          </div>
-      </section>
-      <!-- End About -->
-  
+    <!-- Start About -->
+    <div class="ak-height-135 ak-height-lg-80"></div>
+    <section class="container">
+        <div class="about-section">
+            <div class="img-content" data-aos="fade-left">
+                <div class="img-content-one image-hover-animation">
+                    <img src="assets/img/about_1.jpg" class="about_1" alt="...">
+                </div>
+                <div class="img-content-two">
+                    <img src="assets/img/circle.png" class="circle" alt="...">
+                    <div class="img-content-about_2 image-hover-animation">
+                        <img src="assets/img/about_2.jpg" class="about_2" alt="...">
+                    </div>
+                </div>
+            </div>
+            <div class="info-content" data-aos="fade-right">
+                <div class="section-heading style-1">
+                    <div class="section-subtitle" data-i18n="aboutSectionSubtitle">Sobre nosotros</div>
+                    <h2 class="section-title" data-i18n="aboutSectionTitle">
+                        Donde el Fitness y la Gestión se Encuentran
+                    </h2>
+                    <h2 class="stroke-text" data-text="¡Exclusividad!" data-i18n="aboutStrokeText">
+                        ¡Exclusividad!
+                    </h2>
+                    <p class="section-short-desp mt-2" data-i18n="aboutSectionDescription">
+                        En nuestra plataforma de administración de gimnasios, ayudamos a los dueños de gimnasios a optimizar sus operaciones diarias, gestionar mejor sus recursos y aumentar la rentabilidad de sus negocios. Con herramientas avanzadas y un soporte dedicado, ofrecemos soluciones que van desde la gestión de miembros hasta el seguimiento del rendimiento, asegurando que tu gimnasio opere de manera eficiente y rentable.
+                    </p>
+                </div>
+                <!-- Start Faq -->
+                <div class="ak-height-40 ak-height-lg-40"></div>
+                <div class="ak-accordion">
+                    <div class="ak-accordion-item">
+                        <div class="ak-accordion-title">
+                            <h5><span data-i18n="faq1Number">01.</span><span data-i18n="faq1Title">puedo optimizar la gestión de mi gimnasio?</span></h5>
+                        </div>
+                        <div class="ak-accordion-tab" data-i18n="faq1Answer">
+                            Te ofrecemos herramientas para gestionar miembros, horarios, pagos, y más, todo desde una plataforma centralizada que reduce el trabajo manual y aumenta la eficiencia operativa.
+                        </div>
+                    </div>
+                    <div class="ak-accordion-item">
+                        <div class="ak-accordion-title">
+                            <h5><span data-i18n="faq2Number">02.</span><span data-i18n="faq2Title">¿Qué tipo de soporte ofrecen?</span></h5>
+                        </div>
+                        <div class="ak-accordion-tab" data-i18n="faq2Answer">
+                            Ofrecemos soporte personalizado para resolver cualquier duda o problema técnico. Nuestro equipo está disponible para asistirte en todo momento para que tu gimnasio funcione sin problemas.
+                        </div>
+                    </div>
+                    <div class="ak-accordion-item">
+                        <div class="ak-accordion-title">
+                            <h5><span data-i18n="faq3Number">03.</span><span data-i18n="faq3Title">¿Cómo puedo mejorar la experiencia de mis miembros?</span></h5>
+                        </div>
+                        <div class="ak-accordion-tab" data-i18n="faq3Answer">
+                            Nuestra plataforma te permite gestionar clases, crear horarios personalizados, y ofrecer un seguimiento continuo del progreso de tus miembros, lo que mejora su experiencia y satisfacción.
+                        </div>
+                    </div>
+                    <div class="ak-accordion-item">
+                        <div class="ak-accordion-title">
+                            <h5><span data-i18n="faq4Number">04.</span><span data-i18n="faq4Title">¿Puedo usar la plataforma si soy nuevo en la gestión de gimnasios?</span></h5>
+                        </div>
+                        <div class="ak-accordion-tab" data-i18n="faq4Answer">
+                            Claro que sí. Nuestro sistema es fácil de usar y está diseñado tanto para nuevos propietarios de gimnasios como para expertos, con soporte disponible en cada paso.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Faq -->
+        </div>
+    </section>
+    <!-- End About -->
+
 
     <!-- Start feature and video -->
     <div class="ak-height-135 ak-height-lg-80"></div>
@@ -359,14 +399,14 @@
                     <a class='normal' href='#'>
                         <img src="assets/img/feature_1.png" class="feature-card-img" alt="...">
                         <div class="text-content">
-                            <h3>Enfoque Centrado en la Gestión del Cliente</h3>
-                            <p>Con nuestra plataforma, los dueños de gimnasios pueden gestionar fácilmente la información de los clientes, su historial de pagos y su progreso de forma centralizada.</p>
+                            <h3 data-i18n="feature1TitleNormal">Enfoque Centrado en la Gestión del Cliente</h3>
+                            <p data-i18n="feature1DescNormal">Con nuestra plataforma, los dueños de gimnasios pueden gestionar fácilmente la información de los clientes, su historial de pagos y su progreso de forma centralizada.</p>
                         </div>
                     </a>
                     <div class='info'>
                         <div class="hover-content">
-                            <h3>Enfoque Centrado en la Gestión del Cliente</h3>
-                            <p>Ofrecemos una administración completa del cliente para mejorar la experiencia y fidelidad. Gestiona su información, pagos y membresías desde un solo lugar.</p>
+                            <h3 data-i18n="feature1TitleHover">Enfoque Centrado en la Gestión del Cliente</h3>
+                            <p data-i18n="feature1DescHover">Ofrecemos una administración completa del cliente para mejorar la experiencia y fidelidad. Gestiona su información, pagos y membresías desde un solo lugar.</p>
                         </div>
                     </div>
                 </div>
@@ -374,14 +414,14 @@
                     <a class='normal' href='#'>
                         <img src="assets/img/feature_2.png" class="feature-card-img" alt="...">
                         <div class="text-content">
-                            <h3>Gestión de Horarios y Actividades</h3>
-                            <p>Facilita la programación de clases y actividades, optimizando los horarios y mejorando la experiencia tanto para tus empleados como para los miembros de tu gimnasio.</p>
+                            <h3 data-i18n="feature2TitleNormal">Gestión de Horarios y Actividades</h3>
+                            <p data-i18n="feature2DescNormal">Facilita la programación de clases y actividades, optimizando los horarios y mejorando la experiencia tanto para tus empleados como para los miembros de tu gimnasio.</p>
                         </div>
                     </a>
                     <div class='info'>
                         <div class="hover-content">
-                            <h3>Gestión de Horarios y Actividades</h3>
-                            <p>Con nuestra aplicación web, puedes gestionar horarios de clases, actividades y personal de manera eficiente, mejorando la organización y el flujo del gimnasio.</p>
+                            <h3 data-i18n="feature2TitleHover">Gestión de Horarios y Actividades</h3>
+                            <p data-i18n="feature2DescHover">Con nuestra aplicación web, puedes gestionar horarios de clases, actividades y personal de manera eficiente, mejorando la organización y el flujo del gimnasio.</p>
                         </div>
                     </div>
                 </div>
@@ -389,14 +429,14 @@
                     <a class='normal' href='#'>
                         <img src="assets/img/feature_3.png" class="feature-card-img" alt="...">
                         <div class="text-content">
-                            <h3>Gestión del Personal</h3>
-                            <p>Controla la asistencia, pagos y rendimiento de tu equipo de trabajo. Ten toda la información del personal disponible y actualizada en tiempo real.</p>
+                            <h3 data-i18n="feature3TitleNormal">Gestión del Personal</h3>
+                            <p data-i18n="feature3DescNormal">Controla la asistencia, pagos y rendimiento de tu equipo de trabajo. Ten toda la información del personal disponible y actualizada en tiempo real.</p>
                         </div>
                     </a>
                     <div class='info'>
                         <div class="hover-content">
-                            <h3>Gestión del Personal</h3>
-                            <p>Desde las asistencias hasta la planificación de turnos, puedes gestionar todos los aspectos relacionados con tu personal de manera sencilla y eficiente.</p>
+                            <h3 data-i18n="feature3TitleHover">Gestión del Personal</h3>
+                            <p data-i18n="feature3DescHover">Desde las asistencias hasta la planificación de turnos, puedes gestionar todos los aspectos relacionados con tu personal de manera sencilla y eficiente.</p>
                         </div>
                     </div>
                 </div>
@@ -404,14 +444,14 @@
                     <a class='normal' href='#'>
                         <img src="assets/img/feature_4.png" class="feature-card-img" alt="...">
                         <div class="text-content">
-                            <h3>Gestión de Inventarios y Equipos </h3>
-                            <p>Controla el inventario de equipos, suplementos y productos dentro de tu gimnasio. Recibe alertas y reportes automáticos cuando sea necesario hacer un pedido.</p>
+                            <h3 data-i18n="feature4TitleNormal">Gestión de Inventarios y Equipos </h3>
+                            <p data-i18n="feature4DescNormal">Controla el inventario de equipos, suplementos y productos dentro de tu gimnasio. Recibe alertas y reportes automáticos cuando sea necesario hacer un pedido.</p>
                         </div>
                     </a>
                     <div class='info'>
                         <div class="hover-content">
-                            <h3>Gestión de Inventarios y Equipos</h3>
-                            <p>Con nuestra aplicación, gestionarás los recursos de tu gimnasio sin complicaciones, optimizando los costos y asegurando la disponibilidad de los equipos.</p>
+                            <h3 data-i18n="feature4TitleHover">Gestión de Inventarios y Equipos</h3>
+                            <p data-i18n="feature4DescHover">Con nuestra aplicación, gestionarás los recursos de tu gimnasio sin complicaciones, optimizando los costos y asegurando la disponibilidad de los equipos.</p>
                         </div>
                     </div>
                 </div>
@@ -434,7 +474,7 @@
     <div class="container">
         <div class="partner-client style-1">
             <div class="title">
-                <h1 class="stroke-text">
+                <h1 class="stroke-text" data-i18n="partnerClientsTitle">
                     CLIENTES <br> QUE CONFIAN EN NOSOTROS
                 </h1>
             </div>
@@ -476,12 +516,12 @@
     <div class="container">
         <div class="subscribe-email type2" data-aos="fade-up">
             <div class="subscribe-content">
-                <h3 class="subscribe-title">SUSCRÍBETE A NUESTRO BOLETÍN</h3>
-                <p class="subscribe-desp ak-font-18">Recibe las últimas novedades, consejos de administración y mejores prácticas para optimizar la gestión de tu gimnasio. Mantente al día con lo que realmente importa.</p>
+                <h3 class="subscribe-title" data-i18n="subscribeTitle">SUSCRÍBETE A NUESTRO BOLETÍN</h3>
+                <p class="subscribe-desp ak-font-18" data-i18n="subscribeDescription">Recibe las últimas novedades, consejos de administración y mejores prácticas para optimizar la gestión de tu gimnasio. Mantente al día con lo que realmente importa.</p>
             </div>
             <form class="subscribe-form">
-                <input type="text" name="email" id="email" placeholder="Enter your email..." class="email-input">
-                <button type="submit" class="secondary-btn">
+                <input type="text" name="email" id="email" data-i18n-placeholder="subscribePlaceholder" placeholder="Enter your email..." class="email-input">
+                <button type="submit" class="secondary-btn" data-i18n="subscribeButton">
                     <span>
                         SUSCRÍBETE
                     </span>
@@ -504,72 +544,72 @@
     </div>
     <!-- End Subscribe Email -->
 
-  <!-- Start Footer -->
-  <div class="ak-height-135 ak-height-lg-80"></div>
-  <footer class="footer">
-      <img src="assets/img/footer_bg_light.png" class="footer_bg_light" alt="...">
-      <div class="border-footer-1"></div>
-      <div class="container">
-          <div class="footer style-1">
-              <!-- <div class="border-footer-1"></div> -->
-              <div class="location-contact">
-                  <h5 class="title">UBICACIÓN & CONTACTO</h5>
-                  <p class="address"><span>UBICACIÓN:</span> Santo Toribio de Mogrovejo 133,
-                      <br> Collique, Comas, Perú
-                  </p>
-                  <a href="mailto:example@email.com" class="email"><span>Email:</span> contacto@fitmanager.com.pe</a>
-                  <p><span class="time">Horario de Atención:</span> Lunes-Sabado: 24/7</p>
-              </div>
+    <!-- Start Footer -->
+    <div class="ak-height-135 ak-height-lg-80"></div>
+    <footer class="footer">
+        <img src="assets/img/footer_bg_light.png" class="footer_bg_light" alt="...">
+        <div class="border-footer-1"></div>
+        <div class="container">
+            <div class="footer style-1">
+                <!-- <div class="border-footer-1"></div> -->
+                <div class="location-contact">
+                    <h5 class="title" data-i18n="footerLocationContactTitle">UBICACIÓN & CONTACTO</h5>
+                    <p class="address"><span data-i18n="footerLocationLabel">UBICACIÓN:</span> Santo Toribio de Mogrovejo 133,
+                        <br> <span data-i18n="footerAddressDetails">Collique, Comas, Perú</span>
+                    </p>
+                    <a href="mailto:example@email.com" class="email"><span data-i18n="footerEmailLabel">Email:</span> contacto@fitmanager.com.pe</a>
+                    <p><span class="time" data-i18n="footerHoursLabel">Horario de Atención:</span> <span data-i18n="footerHoursDetails">Lunes-Sabado: 24/7</span></p>
+                </div>
 
-              <div class="link-social">
-                  <div class="link">
-                      <h5 class="title">CONOCENOS</h5>
-                      <a href="about.html">Nosotros</a>
-                      <a href="pricing.html">Planes</a>
-                      <a href="contact-us.html">Contactanos</a>
-                  </div>
-                  <div class="social">
-                      <h5 class="title">SOCIAL</h5>
-                      <a href="https://www.facebook.com/">Facebook</a>
-                      <a href="https://www.instagram.com/">Instagram</a>
-                      <a href="https://www.tiktok.com/">Tiktok</a>
-                      <a href="https://x.com/">Twitter</a>
-                  </div>
-              </div>
+                <div class="link-social">
+                    <div class="link">
+                        <h5 class="title" data-i18n="footerKnowUsTitle">CONOCENOS</h5>
+                        <a href="about.html" data-i18n="footerAboutUs">Nosotros</a>
+                        <a href="pricing.html" data-i18n="footerPlans">Planes</a>
+                        <a href="contact-us.html" data-i18n="footerContactUs">Contactanos</a>
+                    </div>
+                    <div class="social">
+                        <h5 class="title" data-i18n="footerSocialTitle">SOCIAL</h5>
+                        <a href="https://www.facebook.com/">Facebook</a>
+                        <a href="https://www.instagram.com/">Instagram</a>
+                        <a href="https://www.tiktok.com/">Tiktok</a>
+                        <a href="https://x.com/">Twitter</a>
+                    </div>
+                </div>
 
-              <div class="logo-footer">
-                  <div class="logo">
-                      <img src="assets/img/logo.svg" alt="logo">
-                  </div>
-                  <p class="desp">La gestión de tu gimnasio nunca fue tan fácil. Con nuestra plataforma, administras pagos, membresías y mucho más con solo unos clics.</p>
-                  <a href="tel:(406)5550120" class="phone">
-                      <span class="icon">
-                          <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <circle cx="20" cy="20.0137" r="20" fill="#F67A45" />
-                              <g clip-path="url(#clip0_2083_46035324)">
-                                  <path
-                                      d="M26.7162 22.5158C25.7366 22.5158 24.7748 22.3626 23.8633 22.0614C23.4167 21.9091 22.8676 22.0488 22.595 22.3288L20.796 23.6869C18.7096 22.5732 17.4245 21.2884 16.326 19.2177L17.6441 17.4655C17.9865 17.1235 18.1094 16.624 17.9622 16.1552C17.6597 15.239 17.506 14.2776 17.506 13.2976C17.5061 12.5896 16.9301 12.0137 16.2222 12.0137H13.2839C12.576 12.0137 12 12.5896 12 13.2975C12 21.4121 18.6016 28.0137 26.7162 28.0137C27.4241 28.0137 28 27.4377 28 26.7298V23.7997C28 23.0918 27.424 22.5158 26.7162 22.5158Z"
-                                      fill="white" />
-                              </g>
-                              <defs>
-                                  <clipPath id="clip0_2083_46035324">
-                                      <rect width="16" height="16" fill="white" transform="translate(12 12.0137)" />
-                                  </clipPath>
-                              </defs>
-                          </svg>
-                      </span>
-                      <h3 class="title">(51) 998 265 700</h3>
-                  </a>
-              </div>
-          </div>
-      </div>
-      <div class="border-footer-2"></div>
-      <div class="copyright-text">
-          <p>Copyright 2025, All Right reserved</p>
-      </div>
-  </footer>
-
+                <div class="logo-footer">
+                    <div class="logo">
+                        <img src="assets/img/logo.svg" alt="logo">
+                    </div>
+                    <p class="desp" data-i18n="footerDescription">La gestión de tu gimnasio nunca fue tan fácil. Con nuestra plataforma, administras pagos, membresías y mucho más con solo unos clics.</p>
+                    <a href="tel:(406)5550120" class="phone">
+                        <span class="icon">
+                            <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20.0137" r="20" fill="#F67A45" />
+                                <g clip-path="url(#clip0_2083_46035324)">
+                                    <path
+                                        d="M26.7162 22.5158C25.7366 22.5158 24.7748 22.3626 23.8633 22.0614C23.4167 21.9091 22.8676 22.0488 22.595 22.3288L20.796 23.6869C18.7096 22.5732 17.4245 21.2884 16.326 19.2177L17.6441 17.4655C17.9865 17.1235 18.1094 16.624 17.9622 16.1552C17.6597 15.239 17.506 14.2776 17.506 13.2976C17.5061 12.5896 16.9301 12.0137 16.2222 12.0137H13.2839C12.576 12.0137 12 12.5896 12 13.2975C12 21.4121 18.6016 28.0137 26.7162 28.0137C27.4241 28.0137 28 27.4377 28 26.7298V23.7997C28 23.0918 27.424 22.5158 26.7162 22.5158Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2083_46035324">
+                                        <rect width="16" height="16" fill="white" transform="translate(12 12.0137)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </span>
+                        <h3 class="title">(51) 998 265 700</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-footer-2"></div>
+        <div class="copyright-text">
+            <p data-i18n="copyright">Copyright 2025, All Right reserved</p>
+        </div>
+    </footer>
+    <!-- End Footer -->
 
     <span class="ak-scrollup">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -602,6 +642,463 @@
     <script src="assets/js/plugins/swiper.min.js"></script>
     <script src="assets/js/main.js"></script>
 
+    <script>
+        // Translation data
+        const translations = {
+            es: {
+                siteTitle: "fitmanager - Administración de Fitness y Gimnasios",
+                navHome: "Inicio",
+                navHomeTwo: "Inicio Dos",
+                navAbout: "Nosotros",
+                navSchedule: "Muestra",
+                navPlans: "Planes",
+                navContact: "Contacto",
+                joinUsButton: "ÚNETE",
+                pageTitleAboutUs: "Sobre nosotros",
+                homeBreadcrumb: "Inicio",
+                aboutUsBreadcrumb: "Sobre nosotros",
+                aboutSectionSubtitle: "Sobre nosotros",
+                aboutSectionTitle: "Donde el Fitness y la Gestión se Encuentran",
+                aboutStrokeText: "¡Exclusividad!",
+                aboutSectionDescription: "En nuestra plataforma de administración de gimnasios, ayudamos a los dueños de gimnasios a optimizar sus operaciones diarias, gestionar mejor sus recursos y aumentar la rentabilidad de sus negocios. Con herramientas avanzadas y un soporte dedicado, ofrecemos soluciones que van desde la gestión de miembros hasta el seguimiento del rendimiento, asegurando que tu gimnasio opere de manera eficiente y rentable.",
+                faq1Number: "01.",
+                faq1Title: "¿Puedo optimizar la gestión de mi gimnasio?",
+                faq1Answer: "Te ofrecemos herramientas para gestionar miembros, horarios, pagos, y más, todo desde una plataforma centralizada que reduce el trabajo manual y aumenta la eficiencia operativa.",
+                faq2Number: "02.",
+                faq2Title: "¿Qué tipo de soporte ofrecen?",
+                faq2Answer: "Ofrecemos soporte personalizado para resolver cualquier duda o problema técnico. Nuestro equipo está disponible para asistirte en todo momento para que tu gimnasio funcione sin problemas.",
+                faq3Number: "03.",
+                faq3Title: "¿Cómo puedo mejorar la experiencia de mis miembros?",
+                faq3Answer: "Nuestra plataforma te permite gestionar clases, crear horarios personalizados, y ofrecer un seguimiento continuo del progreso de tus miembros, lo que mejora su experiencia y satisfacción.",
+                faq4Number: "04.",
+                faq4Title: "¿Puedo usar la plataforma si soy nuevo en la gestión de gimnasios?",
+                faq4Answer: "Claro que sí. Nuestro sistema es fácil de usar y está diseñado tanto para nuevos propietarios de gimnasios como para expertos, con soporte disponible en cada paso.",
+                feature1TitleNormal: "Enfoque Centrado en la Gestión del Cliente",
+                feature1DescNormal: "Con nuestra plataforma, los dueños de gimnasios pueden gestionar fácilmente la información de los clientes, su historial de pagos y su progreso de forma centralizada.",
+                feature1TitleHover: "Enfoque Centrado en la Gestión del Cliente",
+                feature1DescHover: "Ofrecemos una administración completa del cliente para mejorar la experiencia y fidelidad. Gestiona su información, pagos y membresías desde un solo lugar.",
+                feature2TitleNormal: "Gestión de Horarios y Actividades",
+                feature2DescNormal: "Facilita la programación de clases y actividades, optimizando los horarios y mejorando la experiencia tanto para tus empleados como para los miembros de tu gimnasio.",
+                feature2TitleHover: "Gestión de Horarios y Actividades",
+                feature2DescHover: "Con nuestra aplicación web, puedes gestionar horarios de clases, actividades y personal de manera eficiente, mejorando la organización y el flujo del gimnasio.",
+                feature3TitleNormal: "Gestión del Personal",
+                feature3DescNormal: "Controla la asistencia, pagos y rendimiento de tu equipo de trabajo. Ten toda la información del personal disponible y actualizada en tiempo real.",
+                feature3TitleHover: "Gestión del Personal",
+                feature3DescHover: "Desde las asistencias hasta la planificación de turnos, puedes gestionar todos los aspectos relacionados con tu personal de manera sencilla y eficiente.",
+                feature4TitleNormal: "Gestión de Inventarios y Equipos",
+                feature4DescNormal: "Controla el inventario de equipos, suplementos y productos dentro de tu gimnasio. Recibe alertas y reportes automáticos cuando sea necesario hacer un pedido.",
+                feature4TitleHover: "Gestión de Inventarios y Equipos",
+                feature4DescHover: "Con nuestra aplicación, gestionarás los recursos de tu gimnasio sin complicaciones, optimizando los costos y asegurando la disponibilidad de los equipos.",
+                partnerClientsTitle: "CLIENTES QUE CONFIAN EN NOSOTROS",
+                subscribeTitle: "SUSCRÍBETE A NUESTRO BOLETÍN",
+                subscribeDescription: "Recibe las últimas novedades, consejos de administración y mejores prácticas para optimizar la gestión de tu gimnasio. Mantente al día con lo que realmente importa.",
+                subscribePlaceholder: "Introduce tu correo electrónico...",
+                subscribeButton: "SUSCRÍBETE",
+                slidingTextAbout1: "Gestiona tu gimnasio de forma eficiente",
+                slidingTextAbout2: "Optimiza tu tiempo y recursos",
+                slidingTextAbout3: "Supera tus expectativas",
+                slidingTextAbout4: "Maximiza tus ganancias",
+                slidingTextAbout5: "Transforma la gestión de tu gimnasio",
+                slidingTextAbout6: "Mejora la experiencia de tus clientes",
+                slidingTextAbout7: "Facilita la administración de horarios",
+                slidingTextAbout8: "Todo en un solo lugar",
+                slidingTextAbout9: "La solución que tu gimnasio necesita",
+                slidingTextAbout10: "Mejora la gestión de pagos",
+                slidingTextAbout11: "Automatiza tu inventario",
+                slidingTextAbout12: "Gestiona tu personal de forma eficiente",
+                slidingTextAbout13: "Optimiza el tiempo de tus clientes",
+                slidingTextAbout14: "Gestiona pagos y miembros fácilmente",
+                slidingTextAbout15: "Todo desde una sola plataforma",
+                ctaStrokeText: "¡ELIGE!",
+                ctaTitle: "PLAN",
+                ctaDescription: "Mejora la gestión de tu gimnasio. <br> Mejora la experiencia de tus clientes y aumenta tus ingresos.",
+                choosePlanButton: "ELIGE UN PLAN",
+                footerLocationContactTitle: "UBICACIÓN & CONTACTO",
+                footerLocationLabel: "UBICACIÓN:",
+                footerAddressDetails: "Collique, Comas, Perú",
+                footerEmailLabel: "Email:",
+                footerHoursLabel: "Horario de Atención:",
+                footerHoursDetails: "Lunes-Sabado: 24/7",
+                footerKnowUsTitle: "CONÓCENOS",
+                footerAboutUs: "Nosotros",
+                footerPlans: "Planes",
+                footerContactUs: "Contáctanos",
+                footerSocialTitle: "SOCIAL",
+                footerDescription: "La gestión de tu gimnasio nunca fue tan fácil. Con nuestra plataforma, administras pagos, membresías y mucho más con solo unos clics.",
+                copyright: "Copyright 2025, Todos los derechos reservados",
+                pageTitleContactUs: "Contáctanos",
+                contactUsBreadcrumb: "Contáctanos",
+                contactDetailsTitle: "UBICACIÓN Y CONTACTO",
+                contactDetailsDescription: "Contáctanos hoy mismo y descubre cómo nuestra aplicación web para la administración de gimnasios puede simplificar las operaciones de tu gimnasio. Desde la gestión de inventarios, pagos, horarios, trabajadores y clientes, te ofrecemos una solución todo en uno para administrar tu gimnasio de manera eficiente.",
+                addressTitle: "Dirección: ",
+                addressDetails: "Santo Toribio de Mogrovejo 133, Collique, Comas, Lima, Perú",
+                emailTitle: "Correo Electrónico: ",
+                emailDetails: "contacto@fitmanager.com.pe",
+                phoneTitle: "Número de Teléfono:",
+                phoneDetails: "(+51) 51 998 265 700",
+                hoursTitle: "Horario de Atención: ",
+                hoursDetails: "Lunes a Domingo: 24 horas",
+                howCanWeHelpTitle: "¿Cómo podemos ayudarte?",
+                namePlaceholder: "escribe tu nombre...",
+                emailPlaceholder: "ejemplo@gmail.com",
+                phonePlaceholder: "(51) 555-0120",
+                messagePlaceholder: "escribe un mensaje...",
+                sendMessageButton: "ENVIAR MENSAJE",
+                pageTitleSchedule: "Muestra",
+                scheduleBreadcrumb: "Muestra",
+                monday: "Lunes",
+                tuesday: "Martes",
+                wednesday: "Miércoles",
+                thursday: "Jueves",
+                friday: "Viernes",
+                saturday: "Sábado",
+                sunday: "Domingo",
+                functionalTraining: "Entrenamiento Funcional",
+                profJuanPerez: "Profesor Juan Pérez",
+                cardio: "Cardio",
+                profRobertoGarcia: "Profesor Roberto García",
+                boxing: "Boxeo",
+                craze: "Craze",
+                yoga: "Yoga",
+                profAnaLopez: "Profesor Ana López",
+                zumba: "Zumba",
+                profLauraMartinez: "Profesora Laura Martínez",
+                bootcamp: "Bootcamp",
+                profJuanPerez: "Profesor Juan Pérez",
+                profMariaGarcia: "Profesora María García",
+                sculpt: "Sculpt",
+                spin: "Spin",
+                toneUp: "Tone Up",
+                mrRodri: "Mr. Rodri",
+                muscle: "Muscle",
+                stretch: "Stretch",
+                workout: "Workout",
+                profThompson: "Profesora Thompson",
+                hiit: "HIIT",
+                profBlancaWhite: "Profesora Blanca White",
+                rhythm: "Rhythm",
+                drPatel: "Dr. Patel",
+                power: "Power",
+                profWilson: "Profesora Wilson",
+                profClark: "Profesor Clark",
+                dmayhem: "DMAYHEM",
+                coachTaylor: "Coach Taylor",
+                // Index page specific translations
+                boostGymButton: "¡IMPULSA TU GIMNASIO!",
+                heroStrokeTextOne: "IMPULSA",
+                heroStrokeTextTwo: "TU GIMNASIO",
+                heroTitleThree: "Y LLEGA A MÁS CLIENTES",
+                heroDescriptionOne: "Descubre cómo nuestro sistema de administración de gimnasios puede ayudarte a gestionar, optimizar y hacer crecer tu negocio. ¡Únete hoy y mejora tu gimnasio con herramientas innovadoras!",
+                joinNowButton: "ÚNETE AHORA",
+                heroStrokeTextOneAlt: "IMPULSA TU GIMNASIO",
+                heroStrokeTextTwoAlt: "Y LLEGA A MÁS CLIENTES",
+                heroTitleThreeAlt: "ÚNETE A NUESTRA COMUNIDAD",
+                heroDescriptionTwo: "Nuestro sistema de gestión para gimnasios está diseñado para facilitar el control de tu negocio y ayudarte a atraer más miembros. ¡Actúa ahora y transforma tu gimnasio!",
+                slidingTextIndex1: "¡Impulsa tu gimnasio!",
+                slidingTextIndex2: "¡No te quedes atrás!",
+                slidingTextIndex3: "¡Haz crecer tu negocio hoy!",
+                slidingTextIndex4: "Gestiona tu gimnasio con facilidad",
+                slidingTextIndex5: "Mejora cada día",
+                slidingTextIndex6: "Más eficiente con cada clic",
+                slidingTextIndex7: "Optimiza tus procesos",
+                slidingTextIndex8: "Transforma la gestión de tu gimnasio",
+                aboutSectionSubtitle: "Sobre nosotros",
+                aboutSectionTitle: "Donde el Fitness y la Gestión se Encuentran",
+                aboutStrokeText: "¡Exclusividad!",
+                aboutSectionDescription: "En nuestra plataforma de administración de gimnasios, ayudamos a los dueños de gimnasios a optimizar sus operaciones diarias, gestionar mejor sus recursos y aumentar la rentabilidad de sus negocios. Con herramientas avanzadas y un soporte dedicado, ofrecemos soluciones que van desde la gestión de miembros hasta el seguimiento del rendimiento, asegurando que tu gimnasio opere de manera eficiente y rentable.",
+                faq1Number: "01.",
+                faq1Title: "¿Puedo optimizar la gestión de mi gimnasio?",
+                faq1Answer: "Te ofrecemos herramientas para gestionar miembros, horarios, pagos, y más, todo desde una plataforma centralizada que reduce el trabajo manual y aumenta la eficiencia operativa.",
+                faq2Number: "02.",
+                faq2Title: "¿Qué tipo de soporte ofrecen?",
+                faq2Answer: "Ofrecemos soporte personalizado para resolver cualquier duda o problema técnico. Nuestro equipo está disponible para asistirte en todo momento para que tu gimnasio funcione sin problemas.",
+                faq3Number: "03.",
+                faq3Title: "¿Cómo puedo mejorar la experiencia de mis miembros?",
+                faq3Answer: "Nuestra plataforma te permite gestionar clases, crear horarios personalizados, y ofrecer un seguimiento continuo del progreso de tus miembros, lo que mejora su experiencia y satisfacción.",
+                faq4Number: "04.",
+                faq4Title: "¿Puedo usar la plataforma si soy nuevo en la gestión de gimnasios?",
+                faq4Answer: "Claro que sí. Nuestro sistema es fácil de usar y está diseñado tanto para nuevos propietarios de gimnasios como para expertos, con soporte disponible en cada paso.",
+                feature1TitleNormal: "Enfoque Centrado en la Gestión del Cliente",
+                feature1DescNormal: "Con nuestra plataforma, los dueños de gimnasios pueden gestionar fácilmente la información de los clientes, su historial de pagos y su progreso de forma centralizada.",
+                feature1TitleHover: "Enfoque Centrado en la Gestión del Cliente",
+                feature1DescHover: "Ofrecemos una administración completa del cliente para mejorar la experiencia y fidelidad. Gestiona su información, pagos y membresías desde un solo lugar.",
+                feature2TitleNormal: "Gestión de Horarios y Actividades",
+                feature2DescNormal: "Facilita la programación de clases y actividades, optimizando los horarios y mejorando la experiencia tanto para tus empleados como para los miembros de tu gimnasio.",
+                feature2TitleHover: "Gestión de Horarios y Actividades",
+                feature2DescHover: "Con nuestra aplicación web, puedes gestionar horarios de clases, actividades y personal de manera eficiente, mejorando la organización y el flujo del gimnasio.",
+                feature3TitleNormal: "Gestión del Personal",
+                feature3DescNormal: "Controla la asistencia, pagos y rendimiento de tu equipo de trabajo. Ten toda la información del personal disponible y actualizada en tiempo real.",
+                feature3TitleHover: "Gestión del Personal",
+                feature3DescHover: "Desde las asistencias hasta la planificación de turnos, puedes gestionar todos los aspectos relacionados con tu personal de manera sencilla y eficiente.",
+                feature4TitleNormal: "Gestión de Inventarios y Equipos ",
+                feature4DescNormal: "Controla el inventario de equipos, suplementos y productos dentro de tu gimnasio. Recibe alertas y reportes automáticos cuando sea necesario hacer un pedido.",
+                feature4TitleHover: "Gestión de Inventarios y Equipos",
+                feature4DescHover: "Con nuestra aplicación, gestionarás los recursos de tu gimnasio sin complicaciones, optimizando los costos y asegurando la disponibilidad de los equipos.",
+                partnerClientsTitle: "CLIENTES QUE CONFIAN EN NOSOTROS",
+                subscribeTitle: "SUSCRÍBETE A NUESTRO BOLETÍN",
+                subscribeDescription: "Recibe las últimas novedades, consejos de administración y mejores prácticas para optimizar la gestión de tu gimnasio. Mantente al día con lo que realmente importa.",
+                subscribePlaceholder: "Introduce tu correo electrónico...",
+                subscribeButton: "SUSCRÍBETE",
+                footerLocationContactTitle: "UBICACIÓN & CONTACTO",
+                footerLocationLabel: "UBICACIÓN:",
+                footerAddressDetails: "Collique, Comas, Perú",
+                footerEmailLabel: "Email:",
+                footerHoursLabel: "Horario de Atención:",
+                footerHoursDetails: "Lunes-Sabado: 24/7",
+                footerKnowUsTitle: "CONOCENOS",
+                footerAboutUs: "Nosotros",
+                footerPlans: "Planes",
+                footerContactUs: "Contactanos",
+                footerSocialTitle: "SOCIAL",
+                footerDescription: "La gestión de tu gimnasio nunca fue tan fácil. Con nuestra plataforma, administras pagos, membresías y mucho más con solo unos clics.",
+                copyright: "Copyright 2025, Todos los derechos reservados",
+            },
+            en: {
+                siteTitle: "fitmanager - Fitness & Gym administration",
+                navHome: "Home",
+                navHomeTwo: "Home Two",
+                navAbout: "About Us",
+                navSchedule: "Schedule",
+                navPlans: "Plans",
+                navContact: "Contact Us",
+                joinUsButton: "JOIN US",
+                pageTitleAboutUs: "About Us",
+                homeBreadcrumb: "Home",
+                aboutUsBreadcrumb: "About Us",
+                aboutSectionSubtitle: "About Us",
+                aboutSectionTitle: "Where Fitness and Management Meet",
+                aboutStrokeText: "Exclusivity!",
+                aboutSectionDescription: "On our gym management platform, we help gym owners optimize their daily operations, better manage their resources, and increase the profitability of their businesses. With advanced tools and dedicated support, we offer solutions ranging from member management to performance tracking, ensuring your gym operates efficiently and profitably.",
+                faq1Number: "01.",
+                faq1Title: "Can I optimize my gym's management?",
+                faq1Answer: "We offer tools to manage members, schedules, payments, and more, all from a centralized platform that reduces manual work and increases operational efficiency.",
+                faq2Number: "02.",
+                faq2Title: "What kind of support do you offer?",
+                faq2Answer: "We offer personalized support to resolve any questions or technical issues. Our team is available to assist you at all times so that your gym runs smoothly.",
+                faq3Number: "03.",
+                faq3Title: "How can I improve my members' experience?",
+                faq3Answer: "Our platform allows you to manage classes, create personalized schedules, and offer continuous tracking of your members' progress, which improves their experience and satisfaction.",
+                faq4Number: "04.",
+                faq4Title: "Can I use the platform if I'm new to gym management?",
+                faq4Answer: "Of course. Our system is easy to use and is designed for both new gym owners and experts, with support available every step of the way.",
+                feature1TitleNormal: "Customer Management Focused Approach",
+                feature1DescNormal: "With our platform, gym owners can easily manage customer information, payment history, and progress centrally.",
+                feature1TitleHover: "Customer Management Focused Approach",
+                feature1DescHover: "We offer complete customer administration to improve experience and loyalty. Manage their information, payments, and memberships from one place.",
+                feature2TitleNormal: "Schedule and Activity Management",
+                feature2DescNormal: "Facilitates the scheduling of classes and activities, optimizing schedules and improving the experience for both your employees and gym members.",
+                feature2TitleHover: "Schedule and Activity Management",
+                feature2DescHover: "With our web application, you can efficiently manage class schedules, activities, and staff, improving gym organization and flow.",
+                feature3TitleNormal: "Staff Management",
+                feature3DescNormal: "Control the attendance, payments, and performance of your work team. Have all staff information available and updated in real time.",
+                feature3TitleHover: "Staff Management",
+                feature3DescHover: "From attendance to shift planning, you can manage all aspects related to your staff simply and efficiently.",
+                feature4TitleNormal: "Inventory and Equipment Management",
+                feature4DescNormal: "Control the inventory of equipment, supplements, and products within your gym. Receive automatic alerts and reports when an order needs to be placed.",
+                feature4TitleHover: "Inventory and Equipment Management",
+                feature4DescHover: "With our application, you will manage your gym's resources without complications, optimizing costs and ensuring equipment availability.",
+                partnerClientsTitle: "CLIENTS WHO TRUST US",
+                subscribeTitle: "SUBSCRIBE TO OUR NEWSLETTER",
+                subscribeDescription: "Receive the latest news, management tips, and best practices to optimize your gym's management. Stay up-to-date with what really matters.",
+                subscribePlaceholder: "Enter your email...",
+                subscribeButton: "SUBSCRIBE",
+                slidingTextAbout1: "Manage your gym efficiently",
+                slidingTextAbout2: "Optimize your time and resources",
+                slidingTextAbout3: "Exceed your expectations",
+                slidingTextAbout4: "Maximize your profits",
+                slidingTextAbout5: "Transform your gym's management",
+                slidingTextAbout6: "Improve your clients' experience",
+                slidingTextAbout7: "Facilitate schedule administration",
+                slidingTextAbout8: "All in one place",
+                slidingTextAbout9: "The solution your gym needs",
+                slidingTextAbout10: "Improve payment management",
+                slidingTextAbout11: "Automate your inventory",
+                slidingTextAbout12: "Manage your staff efficiently",
+                slidingTextAbout13: "Optimize your clients' time",
+                slidingTextAbout14: "Manage payments and members easily",
+                slidingTextAbout15: "All from a single platform",
+                ctaStrokeText: "CHOOSE!",
+                ctaTitle: "PLAN",
+                ctaDescription: "Improve your gym's management. <br> Enhance your clients' experience and increase your revenue.",
+                choosePlanButton: "CHOOSE A PLAN",
+                footerLocationContactTitle: "LOCATION & CONTACT",
+                footerLocationLabel: "LOCATION:",
+                footerAddressDetails: "Collique, Comas, Peru",
+                footerEmailLabel: "Email:",
+                footerHoursLabel: "Opening Hours:",
+                footerHoursDetails: "Monday-Saturday: 24/7",
+                footerKnowUsTitle: "ABOUT US",
+                footerAboutUs: "About Us",
+                footerPlans: "Plans",
+                footerContactUs: "Contact Us",
+                footerSocialTitle: "SOCIAL",
+                footerDescription: "Managing your gym has never been easier. With our platform, you manage payments, memberships, and much more with just a few clicks.",
+                copyright: "Copyright 2025, All Rights Reserved",
+                pageTitleContactUs: "Contact Us",
+                contactUsBreadcrumb: "Contact Us",
+                contactDetailsTitle: "LOCATION AND CONTACT",
+                contactDetailsDescription: "Contact us today and discover how our web application for gym administration can simplify your gym's operations. From inventory management, payments, schedules, staff, and clients, we offer an all-in-one solution to efficiently manage your gym.",
+                addressTitle: "Address: ",
+                addressDetails: "Santo Toribio de Mogrovejo 133, Collique, Comas, Lima, Peru",
+                emailTitle: "Email: ",
+                emailDetails: "contacto@fitmanager.com.pe",
+                phoneTitle: "Phone Number:",
+                phoneDetails: "(+51) 51 998 265 700",
+                hoursTitle: "Opening Hours: ",
+                hoursDetails: "Monday to Sunday: 24 hours",
+                howCanWeHelpTitle: "How can we help you?",
+                namePlaceholder: "write your name...",
+                emailPlaceholder: "example@gmail.com",
+                phonePlaceholder: "(51) 555-0120",
+                messagePlaceholder: "write a message...",
+                sendMessageButton: "SEND MESSAGE",
+                pageTitleSchedule: "Schedule",
+                scheduleBreadcrumb: "Schedule",
+                monday: "Monday",
+                tuesday: "Tuesday",
+                wednesday: "Wednesday",
+                thursday: "Thursday",
+                friday: "Friday",
+                saturday: "Saturday",
+                sunday: "Sunday",
+                functionalTraining: "Functional Training",
+                profJuanPerez: "Professor Juan Pérez",
+                cardio: "Cardio",
+                profRobertoGarcia: "Professor Roberto García",
+                boxing: "Boxing",
+                craze: "Craze",
+                yoga: "Yoga",
+                profAnaLopez: "Professor Ana López",
+                zumba: "Zumba",
+                profLauraMartinez: "Professor Laura Martínez",
+                bootcamp: "Bootcamp",
+                profJuanPerez: "Professor Juan Pérez",
+                profMariaGarcia: "Professor María García",
+                sculpt: "Sculpt",
+                spin: "Spin",
+                toneUp: "Tone Up",
+                mrRodri: "Mr. Rodri",
+                muscle: "Muscle",
+                stretch: "Stretch",
+                workout: "Workout",
+                profThompson: "Professor Thompson",
+                hiit: "HIIT",
+                profBlancaWhite: "Professor Blanca White",
+                rhythm: "Rhythm",
+                drPatel: "Dr. Patel",
+                power: "Power",
+                profWilson: "Professor Wilson",
+                profClark: "Professor Clark",
+                dmayhem: "DMAYHEM",
+                coachTaylor: "Coach Taylor",
+                // Index page specific translations
+                boostGymButton: "BOOST YOUR GYM!",
+                heroStrokeTextOne: "BOOST",
+                heroStrokeTextTwo: "YOUR GYM",
+                heroTitleThree: "AND REACH MORE CLIENTS",
+                heroDescriptionOne: "Discover how our gym management system can help you manage, optimize, and grow your business. Join today and improve your gym with innovative tools!",
+                joinNowButton: "JOIN NOW",
+                heroStrokeTextOneAlt: "BOOST YOUR GYM",
+                heroStrokeTextTwoAlt: "AND REACH MORE CLIENTS",
+                heroTitleThreeAlt: "JOIN OUR COMMUNITY",
+                heroDescriptionTwo: "Our gym management system is designed to facilitate control of your business and help you attract more members. Act now and transform your gym!",
+                slidingTextIndex1: "Boost your gym!",
+                slidingTextIndex2: "Don't get left behind!",
+                slidingTextIndex3: "Grow your business today!",
+                slidingTextIndex4: "Manage your gym with ease",
+                slidingTextIndex5: "Improve every day",
+                slidingTextIndex6: "More efficient with every click",
+                slidingTextIndex7: "Optimize your processes",
+                slidingTextIndex8: "Transform your gym's management",
+                aboutSectionSubtitle: "About us",
+                aboutSectionTitle: "Where Fitness and Management Meet",
+                aboutStrokeText: "Exclusivity!",
+                aboutSectionDescription: "On our gym management platform, we help gym owners optimize their daily operations, better manage their resources, and increase the profitability of their businesses. With advanced tools and dedicated support, we offer solutions ranging from member management to performance tracking, ensuring your gym operates efficiently and profitably.",
+                faq1Number: "01.",
+                faq1Title: "Can I optimize my gym's management?",
+                faq1Answer: "We offer tools to manage members, schedules, payments, and more, all from a centralized platform that reduces manual work and increases operational efficiency.",
+                faq2Number: "02.",
+                faq2Title: "What kind of support do you offer?",
+                faq2Answer: "We offer personalized support to resolve any questions or technical issues. Our team is available to assist you at all times so that your gym runs smoothly.",
+                faq3Number: "03.",
+                faq3Title: "How can I improve my members' experience?",
+                faq3Answer: "Our platform allows you to manage classes, create personalized schedules, and offer continuous tracking of your members' progress, which improves their experience and satisfaction.",
+                faq4Number: "04.",
+                faq4Title: "Can I use the platform if I'm new to gym management?",
+                faq4Answer: "Of course. Our system is easy to use and is designed for both new gym owners and experts, with support available every step of the way.",
+                feature1TitleNormal: "Customer Management Focused Approach",
+                feature1DescNormal: "With our platform, gym owners can easily manage customer information, payment history, and progress centrally.",
+                feature1TitleHover: "Customer Management Focused Approach",
+                feature1DescHover: "We offer complete customer administration to improve experience and loyalty. Manage their information, payments, and memberships from one place.",
+                feature2TitleNormal: "Schedule and Activity Management",
+                feature2DescNormal: "Facilitates the scheduling of classes and activities, optimizing schedules and improving the experience for both your employees and gym members.",
+                feature2TitleHover: "Schedule and Activity Management",
+                feature2DescHover: "With our web application, you can efficiently manage class schedules, activities, and staff, improving gym organization and flow.",
+                feature3TitleNormal: "Staff Management",
+                feature3DescNormal: "Control the attendance, payments, and performance of your work team. Have all staff information available and updated in real time.",
+                feature3TitleHover: "Staff Management",
+                feature3DescHover: "From attendance to shift planning, you can manage all aspects related to your staff simply and efficiently.",
+                feature4TitleNormal: "Inventory and Equipment Management",
+                feature4DescNormal: "Control the inventory of equipment, supplements, and products within your gym. Receive automatic alerts and reports when an order needs to be placed.",
+                feature4TitleHover: "Inventory and Equipment Management",
+                feature4DescHover: "With our application, you will manage your gym's resources without complications, optimizing costs and ensuring equipment availability.",
+                partnerClientsTitle: "CLIENTS WHO TRUST US",
+                subscribeTitle: "SUBSCRIBE TO OUR NEWSLETTER",
+                subscribeDescription: "Receive the latest news, management tips, and best practices to optimize your gym's management. Stay up-to-date with what really matters.",
+                subscribePlaceholder: "Enter your email...",
+                subscribeButton: "SUBSCRIBE",
+                footerLocationContactTitle: "LOCATION & CONTACT",
+                footerLocationLabel: "LOCATION:",
+                footerAddressDetails: "Collique, Comas, Peru",
+                footerEmailLabel: "Email:",
+                footerHoursLabel: "Opening Hours:",
+                footerHoursDetails: "Monday-Saturday: 24/7",
+                footerKnowUsTitle: "ABOUT US",
+                footerAboutUs: "About Us",
+                footerPlans: "Plans",
+                footerContactUs: "Contact Us",
+                footerSocialTitle: "SOCIAL",
+                footerDescription: "Managing your gym has never been easier. With our platform, you manage payments, memberships, and much more with just a few clicks.",
+                copyright: "Copyright 2025, All Rights Reserved",
+            }
+        };
+
+        // Function to set the language
+        function setLanguage(lang) {
+            // Update the lang attribute of the html tag
+            document.documentElement.lang = lang;
+
+            // Update all elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+
+            // Update placeholder attributes
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-i18n-placeholder');
+                if (translations[lang] && translations[lang][key]) {
+                    element.placeholder = translations[lang][key];
+                }
+            });
+
+            // Update the site title in the <title> tag
+            const titleElement = document.querySelector('title');
+            if (titleElement && translations[lang] && translations[lang]['siteTitle']) {
+                titleElement.textContent = translations[lang]['siteTitle'];
+            }
+        }
+
+        // Set default language on page load (e.g., from browser preference or 'es')
+        document.addEventListener('DOMContentLoaded', () => {
+            const userLang = navigator.language.split('-')[0]; // Get browser's language (e.g., 'es', 'en')
+            const initialLang = translations[userLang] ? userLang : 'es'; // Default to Spanish if browser language not found
+            document.getElementById('language-switcher').value = initialLang;
+            setLanguage(initialLang);
+        });
+    </script>
 </body>
 
 </html>

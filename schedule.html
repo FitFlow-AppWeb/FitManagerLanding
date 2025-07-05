@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="es">
 
 <head>
     <!-- Meta Tags -->
@@ -10,539 +10,580 @@
     <!-- Favicon Icon -->
     <link rel="icon" href="assets/img/logo.svg" />
     <!-- Site Title -->
-    <title>fitmanager - Fitness & Gym administration</title>
+    <title data-i18n="siteTitle">fitmanager - Fitness & Gym administration</title>
     <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/aos.css" />
     <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Tailwind CSS CDN for language selector styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the language selector */
+        .language-selector {
+            position: relative;
+            display: inline-block;
+            margin-left: 20px;
+            /* Adjust as needed */
+        }
+
+        .language-selector select {
+            background-color: #333;
+            color: white;
+            border: 1px solid #555;
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            appearance: none;
+            /* Remove default select arrow */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2C197.3L159.9%2C69.8c-2.9-2.9-6.9-4.5-11.2-4.5c-4.3%2C0-8.4%2C1.6-11.2%2C4.5L5.1%2C197.3c-3%2C3-4.7%2C6.9-4.7%2C11.2c0%2C4.3%2C1.7%2C8.3%2C4.7%2C11.3l17.8%2C17.7c3%2C3%2C6.9%2C4.7%2C11.3%2C4.7c4.3%2C0%2C8.3-1.7%2C11.3-4.7l120.3-120.3l120.3%2C120.3c3%2C3%2C6.9%2C4.7%2C11.3%2C4.7c4.3%2C0%2C8.3-1.7%2C11.3-4.7l17.8-17.7c3-3%2C4.7-6.9%2C4.7-11.3C291.7%2C204.2%2C290%2C200.3%2C287%2C197.3z%22%2F%3E%3C%2Fsvg%3E');
+            background-repeat: no-repeat;
+            background-position: right 0.7em top 50%, 0 0;
+            background-size: 0.65em auto, 100%;
+        }
+    </style>
 </head>
 
 <body>
 
-   <!-- Start Header Section -->
-   <header class="ak-site_header ak-style1 ak-sticky_header">
-    <div class="ak-main_header">
-        <div class="container">
-            <div class="ak-main_header_in">
-                <div class="ak-main-header-left">
-                    <a class="ak-site_branding" href="index.html">
-                        <img src="assets/img/logo.svg" alt="...">
-                    </a>
-                </div>
-                <div class="ak-main-header-center">
-                    <div class="ak-nav ak-medium">
-                        <ul class="ak-nav_list">
-                            <li class="menu-item-has-children">
-                                <a href="index.html">Home</a>
-                                <ul>
-                                    <li>
-                                        <a href="index.html">Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-two.html">Home Two</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="about.html">About</a>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="schedule.html">Muestra</a>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="pricing.html">Planes</a>
-                            </li>
-                            <li>
-                                <a href="contact-us.html">Contáctanos</a>
-                            </li>
-                        </ul>
+    <!-- Start Header Section -->
+    <header class="ak-site_header ak-style1 ak-sticky_header">
+        <div class="ak-main_header">
+            <div class="container">
+                <div class="ak-main_header_in">
+                    <div class="ak-main-header-left">
+                        <a class="ak-site_branding" href="index.html">
+                            <img src="assets/img/logo.svg" alt="...">
+                        </a>
                     </div>
-                </div>
-                <div class="ak-main-header-right">
-                        <a href="https://fitmanager-c2b2a.web.app/" class="button-primary">
-                        UNETE
-                    </a>
+                    <div class="ak-main-header-center">
+                        <div class="ak-nav ak-medium">
+                            <ul class="ak-nav_list">
+                                <li class="menu-item-has-children">
+                                    <a href="index.html" data-i18n="navHome">Home</a>
+                                    <ul>
+                                        <li>
+                                            <a href="index.html" data-i18n="navHome">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="index-two.html" data-i18n="navHomeTwo">Home Two</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="about.html" data-i18n="navAbout">sobre nosotros</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="schedule.html" data-i18n="navSchedule">Muestra</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="pricing.html" data-i18n="navPlans">Planes</a>
+                                </li>
+                                <li>
+                                    <a href="contact-us.html" data-i18n="navContact">Contáctanos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ak-main-header-right">
+                        <a href="https://fitmanager-c2b2a.web.app/" class="button-primary" data-i18n="joinUsButton">
+                            UNETE
+                        </a>
+                        <!-- Language Selector -->
+                        <div class="language-selector">
+                            <select id="language-switcher" onchange="setLanguage(this.value)">
+                                <option value="es">Español</option>
+                                <option value="en">English</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
-<!-- End Header Section -->
+    </header>
+    <!-- End Header Section -->
 
-    <!-- Start common page title  -->
+    <!-- Start common page title -->
     <div data-src="assets/img/common-page-img.png" class="ak-bg">
         <div class="ak-height-200 ak-height-lg-100"></div>
         <div class="container">
             <div class="common-page-title">
-                <h2 class="page-title">MUESTRA</h2>
+                <h2 class="page-title" data-i18n="pageTitleSchedule">MUESTRA</h2>
                 <div class="page-subtitle">
-                    <a href="">Home</a>
+                    <a href="" data-i18n="homeBreadcrumb">Home</a>
                     <p>/</p>
-                    <p>MUESTRA</p>
+                    <p data-i18n="scheduleBreadcrumb">MUESTRA</p>
                 </div>
             </div>
         </div>
         <div class="ak-height-65 ak-height-lg-50"></div>
     </div>
-    <!-- End common page title  -->
+    <!-- End common page title -->
 
- <!-- Start All Classess -->
-<div class="ak-height-135 ak-height-lg-80"></div>
-<div class="container">
-    <div class="schedule-calendar" data-aos="fade-up">
-        <div class="table-responsive br-routine">
-            <table class="tab-content">
-                <tbody>
-                    <tr>
-                        <th class="cs-col-title one"></th>
-                        <th class="cs-col-title">
-                            <div>Lunes</div>
-                        </th>
-                        <th class="cs-col-title">
-                            <div>Martes</div>
-                        </th>
-                        <th class="cs-col-title">
-                            <div>Miércoles</div>
-                        </th>
-                        <th class="cs-col-title">
-                            <div>Jueves</div>
-                        </th>
-                        <th class="cs-col-title">
-                            <div>Viernes</div>
-                        </th>
-                        <th class="cs-col-title">
-                            <div>Sábado</div>
-                        </th>
-                        <th class="cs-col-title">
-                            <div>Domingo</div>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th class="cs-row-title">06:00 - 08:00</th>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Entrenamiento Funcional</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesor Juan Pérez</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td></td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Cardio</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesor Roberto García</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Boxeo</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesor Roberto García</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td></td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Craze</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesor Roberto García</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th class="cs-row-title">08:00 - 10:00</th>
-                        <td></td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Yoga</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesor Ana López</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Zumba</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesora Laura Martínez</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Bootcamp</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesor Juan Pérez</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Boxeo</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesora María García</p>
-                                </div>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="cs-row-title">10:00 - 12:00</th>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Yoga</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesor Roberto García</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td></td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricinghtml">
-                                <div class="cs-item-title">Zumba</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesora Laura Martínez</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Boxeo</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesor Roberto García</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Sculpt</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesor Roberto García</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th class="cs-row-title">12:00 - 02:00</th>
-                        <td></td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Boxeo</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesor Roberto García</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Spin</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesor Roberto García</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Tone Up</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesor Roberto García</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th class="cs-row-title">02:00 - 04:00</th>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Cardio</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesor Roberto García</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td></td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Mr. Rodri</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesor Roberto García</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Boxeo</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesor Roberto García</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td></td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Muscle</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesor Roberto García</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Stretch</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesora María García</p>
-                                </div>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="cs-row-title">04:00 - 06:00</th>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Workout</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesora Thompson</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Cardio</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesor Roberto García</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">HIIT</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesora Blanca White</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th class="cs-row-title">06:00 - 08:00</th>
-                        <td></td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricinghtml">
-                                <div class="cs-item-title">Rhythm</div>
-                                <div class="cs-item-short-title">
-                                    <p>Dr. Patel</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Sculpt</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesora Khan</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td></td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Power</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesora Wilson</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">Dr. Patel</div>
-                                <div class="cs-item-short-title">
-                                    <p>Profesor Clark</p>
-                                </div>
-                            </a>
-                        </td>
-                        <td>
-                            <a class="cs-item tab-pane" href="pricing.html">
-                                <div class="cs-item-title">DMAYHEM</div>
-                                <div class="cs-item-short-title">
-                                    <p>Coach Taylor</p>
-                                </div>
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
-<!-- End All Classess -->
-
-<!--Start Sliding Text  -->
-<div class="ak-height-135 ak-height-lg-80"></div>
-<section class="sliding-text type2">
-    <div class="moving-section-wrap type2 ak-normal text-uppercase">
-        <div class="moving-section-in">
-            <div class="moving-section">
-                <h4 class="moving-text type2">
-                    <span>Gestiona tu gimnasio de forma eficiente</span>
-                    <span>💪</span>
-                    <span>Optimiza tu tiempo y recursos</span>
-                    <span>💪</span>
-                    <span>Supera tus expectativas</span>
-                    <span>💪</span>
-                    <span>Maximiza tus ganancias</span>
-                    <span>💪</span>
-                    <span>Transforma la gestión de tu gimnasio</span>
-                    <span>💪</span>
-                    <span>Mejora la experiencia de tus clientes</span>
-                    <span>💪</span>
-                    <span>Facilita la administración de horarios</span>
-                    <span>💪</span>
-                    <span>Todo en un solo lugar</span>
-                </h4>
-            </div>
-            <div class="moving-section">
-                <h4 class="moving-text type2">
-                    <span>La solución que tu gimnasio necesita</span>
-                    <span>💪</span>
-                    <span>Mejora la gestión de pagos</span>
-                    <span>💪</span>
-                    <span>Automatiza tu inventario</span>
-                    <span>💪</span>
-                    <span>Gestiona tu personal de forma eficiente</span>
-                    <span>💪</span>
-                    <span>Optimiza el tiempo de tus clientes</span>
-                    <span>💪</span>
-                    <span>Gestiona pagos y miembros fácilmente</span>
-                    <span>💪</span>
-                    <span>Todo desde una sola plataforma</span>
-                </h4>
+    <!-- Start All Classess -->
+    <div class="ak-height-135 ak-height-lg-80"></div>
+    <div class="container">
+        <div class="schedule-calendar" data-aos="fade-up">
+            <div class="table-responsive br-routine">
+                <table class="tab-content">
+                    <tbody>
+                        <tr>
+                            <th class="cs-col-title one"></th>
+                            <th class="cs-col-title">
+                                <div data-i18n="monday">Lunes</div>
+                            </th>
+                            <th class="cs-col-title">
+                                <div data-i18n="tuesday">Martes</div>
+                            </th>
+                            <th class="cs-col-title">
+                                <div data-i18n="wednesday">Miércoles</div>
+                            </th>
+                            <th class="cs-col-title">
+                                <div data-i18n="thursday">Jueves</div>
+                            </th>
+                            <th class="cs-col-title">
+                                <div data-i18n="friday">Viernes</div>
+                            </th>
+                            <th class="cs-col-title">
+                                <div data-i18n="saturday">Sábado</div>
+                            </th>
+                            <th class="cs-col-title">
+                                <div data-i18n="sunday">Domingo</div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="cs-row-title">06:00 - 08:00</th>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="functionalTraining">Entrenamiento Funcional</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profJuanPerez">Profesor Juan Pérez</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="cardio">Cardio</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profRobertoGarcia">Profesor Roberto García</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="boxing">Boxeo</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profRobertoGarcia">Profesor Roberto García</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="craze">Craze</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profRobertoGarcia">Profesor Roberto García</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="cs-row-title">08:00 - 10:00</th>
+                            <td></td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="yoga">Yoga</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profAnaLopez">Profesor Ana López</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="zumba">Zumba</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profLauraMartinez">Profesora Laura Martínez</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="bootcamp">Bootcamp</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profJuanPerez">Profesor Juan Pérez</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="boxing">Boxeo</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profMariaGarcia">Profesora María García</p>
+                                    </div>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="cs-row-title">10:00 - 12:00</th>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="yoga">Yoga</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profRobertoGarcia">Profesor Roberto García</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricinghtml">
+                                    <div class="cs-item-title" data-i18n="zumba">Zumba</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profLauraMartinez">Profesora Laura Martínez</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="boxing">Boxeo</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profRobertoGarcia">Profesor Roberto García</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="sculpt">Sculpt</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profRobertoGarcia">Profesor Roberto García</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="cs-row-title">12:00 - 02:00</th>
+                            <td></td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="boxing">Boxeo</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profRobertoGarcia">Profesor Roberto García</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="spin">Spin</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profRobertoGarcia">Profesor Roberto García</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="toneUp">Tone Up</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profRobertoGarcia">Profesor Roberto García</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="cs-row-title">02:00 - 04:00</th>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="cardio">Cardio</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profRobertoGarcia">Profesor Roberto García</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="mrRodri">Mr. Rodri</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profRobertoGarcia">Profesor Roberto García</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="boxing">Boxeo</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profRobertoGarcia">Profesor Roberto García</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="muscle">Muscle</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profRobertoGarcia">Profesor Roberto García</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="stretch">Stretch</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profMariaGarcia">Profesora María García</p>
+                                    </div>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="cs-row-title">04:00 - 06:00</th>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="workout">Workout</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profThompson">Profesora Thompson</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="cardio">Cardio</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profRobertoGarcia">Profesor Roberto García</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="hiit">HIIT</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profBlancaWhite">Profesora Blanca White</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="cs-row-title">06:00 - 08:00</th>
+                            <td></td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricinghtml">
+                                    <div class="cs-item-title" data-i18n="rhythm">Rhythm</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="drPatel">Dr. Patel</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="sculpt">Sculpt</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profKhan">Profesora Khan</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td></td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="power">Power</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profWilson">Profesora Wilson</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="drPatel">Dr. Patel</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="profClark">Profesor Clark</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="cs-item tab-pane" href="pricing.html">
+                                    <div class="cs-item-title" data-i18n="dmayhem">DMAYHEM</div>
+                                    <div class="cs-item-short-title">
+                                        <p data-i18n="coachTaylor">Coach Taylor</p>
+                                    </div>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-</section>
-<!--End Sliding Text  -->
+    <!-- End All Classess -->
 
- <!-- Start CTA -->
-<div class="ak-height-135 ak-height-lg-80"></div>
-<div class="container">
-    <div class="cta-content">
-        <div class="cta-title-info" data-aos="fade-left">
-            <h1 class="stroke-text style2" data-text="¡ELIGE!">
-                ¡ELIGE!
-            </h1>
-            <h1 class="title">PLAN</h1>
-        </div>
-        <div class="cta-desp-info" data-aos="fade-right">
-            <p>Mejora la gestión de tu gimnasio. <br> Mejora la experiencia de tus clientes y aumenta tus ingresos.</p>
-            <div>
-                <img src="assets/img/arrow-img.svg" alt="...">
+    <!--Start Sliding Text -->
+    <div class="ak-height-135 ak-height-lg-80"></div>
+    <section class="sliding-text type2">
+        <div class="moving-section-wrap type2 ak-normal text-uppercase">
+            <div class="moving-section-in">
+                <div class="moving-section">
+                    <h4 class="moving-text type2">
+                        <span data-i18n="slidingTextAbout1">Gestiona tu gimnasio de forma eficiente</span>
+                        <span>💪</span>
+                        <span data-i18n="slidingTextAbout2">Optimiza tu tiempo y recursos</span>
+                        <span>💪</span>
+                        <span data-i18n="slidingTextAbout3">Supera tus expectativas</span>
+                        <span>💪</span>
+                        <span data-i18n="slidingTextAbout4">Maximiza tus ganancias</span>
+                        <span>💪</span>
+                        <span data-i18n="slidingTextAbout5">Transforma la gestión de tu gimnasio</span>
+                        <span>💪</span>
+                        <span data-i18n="slidingTextAbout6">Mejora la experiencia de tus clientes</span>
+                        <span>💪</span>
+                        <span data-i18n="slidingTextAbout7">Facilita la administración de horarios</span>
+                        <span>💪</span>
+                        <span data-i18n="slidingTextAbout8">Todo en un solo lugar</span>
+                    </h4>
+                </div>
+                <div class="moving-section">
+                    <h4 class="moving-text type2">
+                        <span data-i18n="slidingTextAbout9">La solución que tu gimnasio necesita</span>
+                        <span>💪</span>
+                        <span data-i18n="slidingTextAbout10">Mejora la gestión de pagos</span>
+                        <span>💪</span>
+                        <span data-i18n="slidingTextAbout11">Automatiza tu inventario</span>
+                        <span>💪</span>
+                        <span data-i18n="slidingTextAbout12">Gestiona tu personal de forma eficiente</span>
+                        <span>💪</span>
+                        <span data-i18n="slidingTextAbout13">Optimiza el tiempo de tus clientes</span>
+                        <span>💪</span>
+                        <span data-i18n="slidingTextAbout14">Gestiona pagos y miembros fácilmente</span>
+                        <span>💪</span>
+                        <span data-i18n="slidingTextAbout15">Todo desde una sola plataforma</span>
+                    </h4>
+                </div>
             </div>
-            <div>
-                <a href="pricing.html" class="button-primary color2">
-                    ELIGE UN PLAN
-                    <span class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="19" viewBox="0 0 17 19"
-                            fill="none">
-                            <g clip-path="url(#clip0_2123_31)">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M0.84082 18.438L9.84082 9.43799L0.84082 0.437988H7.24555L16.2456 9.43799L7.24555 18.438H0.84082Z"
-                                    fill="#01010F" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_2123_31">
-                                    <rect width="16" height="19" fill="white" transform="translate(0.254883)" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </span>
-                </a>
+        </div>
+    </section>
+    <!--End Sliding Text -->
+
+    <!-- Start CTA -->
+    <div class="ak-height-135 ak-height-lg-80"></div>
+    <div class="container">
+        <div class="cta-content">
+            <div class="cta-title-info" data-aos="fade-left">
+                <h1 class="stroke-text style2" data-text="¡ELIGE!" data-i18n="ctaStrokeText">
+                    ¡ELIGE!
+                </h1>
+                <h1 class="title" data-i18n="ctaTitle">PLAN</h1>
+            </div>
+            <div class="cta-desp-info" data-aos="fade-right">
+                <p data-i18n="ctaDescription">Mejora la gestión de tu gimnasio. <br> Mejora la experiencia de tus clientes y
+                    aumenta tus ingresos.</p>
+                <div>
+                    <img src="assets/img/arrow-img.svg" alt="...">
+                </div>
+                <div>
+                    <a href="pricing.html" class="button-primary color2" data-i18n="choosePlanButton">
+                        ELIGE UN PLAN
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="19" viewBox="0 0 17 19"
+                                fill="none">
+                                <g clip-path="url(#clip0_2123_31)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M0.84082 18.438L9.84082 9.43799L0.84082 0.437988H7.24555L16.2456 9.43799L7.24555 18.438H0.84082Z"
+                                        fill="#01010F" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2123_31">
+                                        <rect width="16" height="19" fill="white" transform="translate(0.254883)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- End CTA -->
+    <!-- End CTA -->
 
-  <!-- Start Footer -->
-  <div class="ak-height-135 ak-height-lg-80"></div>
-  <footer class="footer">
-      <img src="assets/img/footer_bg_light.png" class="footer_bg_light" alt="...">
-      <div class="border-footer-1"></div>
-      <div class="container">
-          <div class="footer style-1">
-              <!-- <div class="border-footer-1"></div> -->
-              <div class="location-contact">
-                  <h5 class="title">UBICACIÓN & CONTACTO</h5>
-                  <p class="address"><span>UBICACIÓN:</span> Santo Toribio de Mogrovejo 133,
-                      <br> Collique, Comas, Perú
-                  </p>
-                  <a href="mailto:example@email.com" class="email"><span>Email:</span> contacto@fitmanager.com.pe</a>
-                  <p><span class="time">Horario de Atención:</span> Lunes-Sabado: 24/7</p>
-              </div>
+    <!-- Start Footer -->
+    <div class="ak-height-135 ak-height-lg-80"></div>
+    <footer class="footer">
+        <img src="assets/img/footer_bg_light.png" class="footer_bg_light" alt="...">
+        <div class="border-footer-1"></div>
+        <div class="container">
+            <div class="footer style-1">
+                <!-- <div class="border-footer-1"></div> -->
+                <div class="location-contact">
+                    <h5 class="title" data-i18n="footerLocationContactTitle">UBICACIÓN & CONTACTO</h5>
+                    <p class="address"><span data-i18n="footerLocationLabel">UBICACIÓN:</span> Santo Toribio de Mogrovejo 133,
+                        <br> <span data-i18n="footerAddressDetails">Collique, Comas, Perú</span>
+                    </p>
+                    <a href="mailto:example@email.com" class="email"><span data-i18n="footerEmailLabel">Email:</span>
+                        contacto@fitmanager.com.pe</a>
+                    <p><span class="time" data-i18n="footerHoursLabel">Horario de Atención:</span> <span
+                            data-i18n="footerHoursDetails">Lunes-Sabado: 24/7</span></p>
+                </div>
 
-              <div class="link-social">
-                  <div class="link">
-                      <h5 class="title">CONOCENOS</h5>
-                      <a href="about.html">Nosotros</a>
-                      <a href="pricing.html">Planes</a>
-                      <a href="contact-us.html">Contactanos</a>
-                  </div>
-                  <div class="social">
-                      <h5 class="title">SOCIAL</h5>
-                      <a href="https://www.facebook.com/">Facebook</a>
-                      <a href="https://www.instagram.com/">Instagram</a>
-                      <a href="https://www.tiktok.com/">Tiktok</a>
-                      <a href="https://x.com/">Twitter</a>
-                  </div>
-              </div>
+                <div class="link-social">
+                    <div class="link">
+                        <h5 class="title" data-i18n="footerKnowUsTitle">CONOCENOS</h5>
+                        <a href="about.html" data-i18n="footerAboutUs">Nosotros</a>
+                        <a href="pricing.html" data-i18n="footerPlans">Planes</a>
+                        <a href="contact-us.html" data-i18n="footerContactUs">Contactanos</a>
+                    </div>
+                    <div class="social">
+                        <h5 class="title" data-i18n="footerSocialTitle">SOCIAL</h5>
+                        <a href="https://www.facebook.com/">Facebook</a>
+                        <a href="https://www.instagram.com/">Instagram</a>
+                        <a href="https://www.tiktok.com/">Tiktok</a>
+                        <a href="https://x.com/">Twitter</a>
+                    </div>
+                </div>
 
-              <div class="logo-footer">
-                  <div class="logo">
-                      <img src="assets/img/logo.svg" alt="logo">
-                  </div>
-                  <p class="desp">La gestión de tu gimnasio nunca fue tan fácil. Con nuestra plataforma, administras pagos, membresías y mucho más con solo unos clics.</p>
-                  <a href="tel:(406)5550120" class="phone">
-                      <span class="icon">
-                          <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <circle cx="20" cy="20.0137" r="20" fill="#F67A45" />
-                              <g clip-path="url(#clip0_2083_46035324)">
-                                  <path
-                                      d="M26.7162 22.5158C25.7366 22.5158 24.7748 22.3626 23.8633 22.0614C23.4167 21.9091 22.8676 22.0488 22.595 22.3288L20.796 23.6869C18.7096 22.5732 17.4245 21.2884 16.326 19.2177L17.6441 17.4655C17.9865 17.1235 18.1094 16.624 17.9622 16.1552C17.6597 15.239 17.506 14.2776 17.506 13.2976C17.5061 12.5896 16.9301 12.0137 16.2222 12.0137H13.2839C12.576 12.0137 12 12.5896 12 13.2975C12 21.4121 18.6016 28.0137 26.7162 28.0137C27.4241 28.0137 28 27.4377 28 26.7298V23.7997C28 23.0918 27.424 22.5158 26.7162 22.5158Z"
-                                      fill="white" />
-                              </g>
-                              <defs>
-                                  <clipPath id="clip0_2083_46035324">
-                                      <rect width="16" height="16" fill="white" transform="translate(12 12.0137)" />
-                                  </clipPath>
-                              </defs>
-                          </svg>
-                      </span>
-                      <h3 class="title">(51) 998 265 700</h3>
-                  </a>
-              </div>
-          </div>
-      </div>
-      <div class="border-footer-2"></div>
-      <div class="copyright-text">
-          <p>Copyright 2024, All Right reserved</p>
-      </div>
-  </footer>
-  <!-- End Footer -->
+                <div class="logo-footer">
+                    <div class="logo">
+                        <img src="assets/img/logo.svg" alt="logo">
+                    </div>
+                    <p class="desp" data-i18n="footerDescription">La gestión de tu gimnasio nunca fue tan fácil. Con
+                        nuestra plataforma, administras pagos, membresías y mucho más con solo unos clics.</p>
+                    <a href="tel:(406)5550120" class="phone">
+                        <span class="icon">
+                            <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20.0137" r="20" fill="#F67A45" />
+                                <g clip-path="url(#clip0_2083_46035324)">
+                                    <path
+                                        d="M26.7162 22.5158C25.7366 22.5158 24.7748 22.3626 23.8633 22.0614C23.4167 21.9091 22.8676 22.0488 22.595 22.3288L20.796 23.6869C18.7096 22.5732 17.4245 21.2884 16.326 19.2177L17.6441 17.4655C17.9865 17.1235 18.1094 16.624 17.9622 16.1552C17.6597 15.239 17.506 14.2776 17.506 13.2976C17.5061 12.5896 16.9301 12.0137 16.2222 12.0137H13.2839C12.576 12.0137 12 12.5896 12 13.2975C12 21.4121 18.6016 28.0137 26.7162 28.0137C27.4241 28.0137 28 27.4377 28 26.7298V23.7997C28 23.0918 27.424 22.5158 26.7162 22.5158Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2083_46035324">
+                                        <rect width="16" height="16" fill="white" transform="translate(12 12.0137)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </span>
+                        <h3 class="title">(51) 998 265 700</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-footer-2"></div>
+        <div class="copyright-text">
+            <p data-i18n="copyright">Copyright 2024, All Right reserved</p>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
 
     <span class="ak-scrollup">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -574,6 +615,326 @@
     <script src="assets/js/plugins/lightgallery.min.js"></script>
     <script src="assets/js/plugins/swiper.min.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+        // Translation data
+        const translations = {
+            es: {
+                siteTitle: "fitmanager - Administración de Fitness y Gimnasios",
+                navHome: "Inicio",
+                navHomeTwo: "Inicio Dos",
+                navAbout: "Nosotros",
+                navSchedule: "Muestra",
+                navPlans: "Planes",
+                navContact: "Contacto",
+                joinUsButton: "ÚNETE",
+                pageTitleAboutUs: "Sobre nosotros",
+                homeBreadcrumb: "Inicio",
+                aboutUsBreadcrumb: "Sobre nosotros",
+                aboutSectionSubtitle: "Sobre nosotros",
+                aboutSectionTitle: "Donde el Fitness y la Gestión se Encuentran",
+                aboutStrokeText: "¡Exclusividad!",
+                aboutSectionDescription: "En nuestra plataforma de administración de gimnasios, ayudamos a los dueños de gimnasios a optimizar sus operaciones diarias, gestionar mejor sus recursos y aumentar la rentabilidad de sus negocios. Con herramientas avanzadas y un soporte dedicado, ofrecemos soluciones que van desde la gestión de miembros hasta el seguimiento del rendimiento, asegurando que tu gimnasio opere de manera eficiente y rentable.",
+                faq1Number: "01.",
+                faq1Title: "¿Puedo optimizar la gestión de mi gimnasio?",
+                faq1Answer: "Te ofrecemos herramientas para gestionar miembros, horarios, pagos, y más, todo desde una plataforma centralizada que reduce el trabajo manual y aumenta la eficiencia operativa.",
+                faq2Number: "02.",
+                faq2Title: "¿Qué tipo de soporte ofrecen?",
+                faq2Answer: "Ofrecemos soporte personalizado para resolver cualquier duda o problema técnico. Nuestro equipo está disponible para asistirte en todo momento para que tu gimnasio funcione sin problemas.",
+                faq3Number: "03.",
+                faq3Title: "¿Cómo puedo mejorar la experiencia de mis miembros?",
+                faq3Answer: "Nuestra plataforma te permite gestionar clases, crear horarios personalizados, y ofrecer un seguimiento continuo del progreso de tus miembros, lo que mejora su experiencia y satisfacción.",
+                faq4Number: "04.",
+                faq4Title: "¿Puedo usar la plataforma si soy nuevo en la gestión de gimnasios?",
+                faq4Answer: "Claro que sí. Nuestro sistema es fácil de usar y está diseñado tanto para nuevos propietarios de gimnasios como para expertos, con soporte disponible en cada paso.",
+                feature1TitleNormal: "Enfoque Centrado en la Gestión del Cliente",
+                feature1DescNormal: "Con nuestra plataforma, los dueños de gimnasios pueden gestionar fácilmente la información de los clientes, su historial de pagos y su progreso de forma centralizada.",
+                feature1TitleHover: "Enfoque Centrado en la Gestión del Cliente",
+                feature1DescHover: "Ofrecemos una administración completa del cliente para mejorar la experiencia y fidelidad. Gestiona su información, pagos y membresías desde un solo lugar.",
+                feature2TitleNormal: "Gestión de Horarios y Actividades",
+                feature2DescNormal: "Facilita la programación de clases y actividades, optimizando los horarios y mejorando la experiencia tanto para tus empleados como para los miembros de tu gimnasio.",
+                feature2TitleHover: "Gestión de Horarios y Actividades",
+                feature2DescHover: "Con nuestra aplicación web, puedes gestionar horarios de clases, actividades y personal de manera eficiente, mejorando la organización y el flujo del gimnasio.",
+                feature3TitleNormal: "Gestión del Personal",
+                feature3DescNormal: "Controla la asistencia, pagos y rendimiento de tu equipo de trabajo. Ten toda la información del personal disponible y actualizada en tiempo real.",
+                feature3TitleHover: "Gestión del Personal",
+                feature3DescHover: "Desde las asistencias hasta la planificación de turnos, puedes gestionar todos los aspectos relacionados con tu personal de manera sencilla y eficiente.",
+                feature4TitleNormal: "Gestión de Inventarios y Equipos",
+                feature4DescNormal: "Controla el inventario de equipos, suplementos y productos dentro de tu gimnasio. Recibe alertas y reportes automáticos cuando sea necesario hacer un pedido.",
+                feature4TitleHover: "Gestión de Inventarios y Equipos",
+                feature4DescHover: "Con nuestra aplicación, gestionarás los recursos de tu gimnasio sin complicaciones, optimizando los costos y asegurando la disponibilidad de los equipos.",
+                partnerClientsTitle: "Nuestros Clientes Confiables",
+                subscribeTitle: "SUSCRÍBETE A NUESTRO BOLETÍN",
+                subscribeDescription: "Recibe las últimas novedades, consejos de administración y mejores prácticas para optimizar la gestión de tu gimnasio. Mantente al día con lo que realmente importa.",
+                subscribePlaceholder: "Introduce tu correo electrónico...",
+                subscribeButton: "SUSCRÍBETE",
+                slidingTextAbout1: "Gestiona tu gimnasio de forma eficiente",
+                slidingTextAbout2: "Optimiza tu tiempo y recursos",
+                slidingTextAbout3: "Supera tus expectativas",
+                slidingTextAbout4: "Maximiza tus ganancias",
+                slidingTextAbout5: "Transforma la gestión de tu gimnasio",
+                slidingTextAbout6: "Mejora la experiencia de tus clientes",
+                slidingTextAbout7: "Facilita la administración de horarios",
+                slidingTextAbout8: "Todo en un solo lugar",
+                slidingTextAbout9: "La solución que tu gimnasio necesita",
+                slidingTextAbout10: "Mejora la gestión de pagos",
+                slidingTextAbout11: "Automatiza tu inventario",
+                slidingTextAbout12: "Gestiona tu personal de forma eficiente",
+                slidingTextAbout13: "Optimiza el tiempo de tus clientes",
+                slidingTextAbout14: "Gestiona pagos y miembros fácilmente",
+                slidingTextAbout15: "Todo desde una sola plataforma",
+                ctaStrokeText: "¡ELIGE!",
+                ctaTitle: "PLAN",
+                ctaDescription: "Mejora la gestión de tu gimnasio. <br> Mejora la experiencia de tus clientes y aumenta tus ingresos.",
+                choosePlanButton: "ELIGE UN PLAN",
+                footerLocationContactTitle: "UBICACIÓN & CONTACTO",
+                footerLocationLabel: "UBICACIÓN:",
+                footerAddressDetails: "Collique, Comas, Perú",
+                footerEmailLabel: "Email:",
+                footerHoursLabel: "Horario de Atención:",
+                footerHoursDetails: "Lunes-Sábado: 24/7",
+                footerKnowUsTitle: "CONÓCENOS",
+                footerAboutUs: "Nosotros",
+                footerPlans: "Planes",
+                footerContactUs: "Contáctanos",
+                footerSocialTitle: "SOCIAL",
+                footerDescription: "La gestión de tu gimnasio nunca fue tan fácil. Con nuestra plataforma, administras pagos, membresías y mucho más con solo unos clics.",
+                copyright: "Copyright 2024, Todos los derechos reservados",
+                pageTitleContactUs: "Contáctanos",
+                contactUsBreadcrumb: "Contáctanos",
+                contactDetailsTitle: "UBICACIÓN Y CONTACTO",
+                contactDetailsDescription: "Contáctanos hoy mismo y descubre cómo nuestra aplicación web para la administración de gimnasios puede simplificar las operaciones de tu gimnasio. Desde la gestión de inventarios, pagos, horarios, trabajadores y clientes, te ofrecemos una solución todo en uno para administrar tu gimnasio de manera eficiente.",
+                addressTitle: "Dirección: ",
+                addressDetails: "Santo Toribio de Mogrovejo 133, Collique, Comas, Lima, Perú",
+                emailTitle: "Correo Electrónico: ",
+                emailDetails: "contacto@fitmanager.com.pe",
+                phoneTitle: "Número de Teléfono:",
+                phoneDetails: "(+51) 51 998 265 700",
+                hoursTitle: "Horario de Atención: ",
+                hoursDetails: "Lunes a Domingo: 24 horas",
+                howCanWeHelpTitle: "¿Cómo podemos ayudarte?",
+                namePlaceholder: "escribe tu nombre...",
+                emailPlaceholder: "ejemplo@gmail.com",
+                phonePlaceholder: "(51) 555-0120",
+                messagePlaceholder: "escribe un mensaje...",
+                sendMessageButton: "ENVIAR MENSAJE",
+                // New translations for the schedule page
+                pageTitleSchedule: "Muestra",
+                scheduleBreadcrumb: "Muestra",
+                monday: "Lunes",
+                tuesday: "Martes",
+                wednesday: "Miércoles",
+                thursday: "Jueves",
+                friday: "Viernes",
+                saturday: "Sábado",
+                sunday: "Domingo",
+                functionalTraining: "Entrenamiento Funcional",
+                profJuanPerez: "Profesor Juan Pérez",
+                cardio: "Cardio",
+                profRobertoGarcia: "Profesor Roberto García",
+                boxing: "Boxeo",
+                craze: "Craze",
+                yoga: "Yoga",
+                profAnaLopez: "Profesor Ana López",
+                zumba: "Zumba",
+                profLauraMartinez: "Profesora Laura Martínez",
+                bootcamp: "Bootcamp",
+                profMariaGarcia: "Profesora María García",
+                sculpt: "Sculpt",
+                spin: "Spin",
+                toneUp: "Tone Up",
+                mrRodri: "Mr. Rodri",
+                muscle: "Muscle",
+                stretch: "Stretch",
+                workout: "Workout",
+                profThompson: "Profesora Thompson",
+                hiit: "HIIT",
+                profBlancaWhite: "Profesora Blanca White",
+                rhythm: "Rhythm",
+                drPatel: "Dr. Patel",
+                power: "Power",
+                profWilson: "Profesora Wilson",
+                profClark: "Profesor Clark",
+                dmayhem: "DMAYHEM",
+                coachTaylor: "Coach Taylor"
+            },
+            en: {
+                siteTitle: "fitmanager - Fitness & Gym administration",
+                navHome: "Home",
+                navHomeTwo: "Home Two",
+                navAbout: "About Us",
+                navSchedule: "Schedule",
+                navPlans: "Plans",
+                navContact: "Contact Us",
+                joinUsButton: "JOIN US",
+                pageTitleAboutUs: "About Us",
+                homeBreadcrumb: "Home",
+                aboutUsBreadcrumb: "About Us",
+                aboutSectionSubtitle: "About Us",
+                aboutSectionTitle: "Where Fitness and Management Meet",
+                aboutStrokeText: "Exclusivity!",
+                aboutSectionDescription: "On our gym management platform, we help gym owners optimize their daily operations, better manage their resources, and increase the profitability of their businesses. With advanced tools and dedicated support, we offer solutions ranging from member management to performance tracking, ensuring your gym operates efficiently and profitably.",
+                faq1Number: "01.",
+                faq1Title: "Can I optimize my gym's management?",
+                faq1Answer: "We offer tools to manage members, schedules, payments, and more, all from a centralized platform that reduces manual work and increases operational efficiency.",
+                faq2Number: "02.",
+                faq2Title: "What kind of support do you offer?",
+                faq2Answer: "We offer personalized support to resolve any questions or technical issues. Our team is available to assist you at all times so that your gym runs smoothly.",
+                faq3Number: "03.",
+                faq3Title: "How can I improve my members' experience?",
+                faq3Answer: "Our platform allows you to manage classes, create personalized schedules, and offer continuous tracking of your members' progress, which improves their experience and satisfaction.",
+                faq4Number: "04.",
+                faq4Title: "Can I use the platform if I'm new to gym management?",
+                faq4Answer: "Of course. Our system is easy to use and is designed for both new gym owners and experts, with support available every step of the way.",
+                feature1TitleNormal: "Customer Management Focused Approach",
+                feature1DescNormal: "With our platform, gym owners can easily manage customer information, payment history, and progress centrally.",
+                feature1TitleHover: "Customer Management Focused Approach",
+                feature1DescHover: "We offer complete customer administration to improve experience and loyalty. Manage their information, payments, and memberships from one place.",
+                feature2TitleNormal: "Schedule and Activity Management",
+                feature2DescNormal: "Facilitates the scheduling of classes and activities, optimizing schedules and improving the experience for both your employees and gym members.",
+                feature2TitleHover: "Schedule and Activity Management",
+                feature2DescHover: "With our web application, you can efficiently manage class schedules, activities, and staff, improving gym organization and flow.",
+                feature3TitleNormal: "Staff Management",
+                feature3DescNormal: "Control the attendance, payments, and performance of your work team. Have all staff information available and updated in real time.",
+                feature3TitleHover: "Staff Management",
+                feature3DescHover: "From attendance to shift planning, you can manage all aspects related to your staff simply and efficiently.",
+                feature4TitleNormal: "Inventory and Equipment Management",
+                feature4DescNormal: "Control the inventory of equipment, supplements, and products within your gym. Receive automatic alerts and reports when an order needs to be placed.",
+                feature4TitleHover: "Inventory and Equipment Management",
+                feature4DescHover: "With our application, you will manage your gym's resources without complications, optimizing costs and ensuring equipment availability.",
+                partnerClientsTitle: "Our Trusted Clients",
+                subscribeTitle: "SUBSCRIBE TO OUR NEWSLETTER",
+                subscribeDescription: "Receive the latest news, management tips, and best practices to optimize your gym's management. Stay up-to-date with what really matters.",
+                subscribePlaceholder: "Enter your email...",
+                subscribeButton: "SUBSCRIBE",
+                slidingTextAbout1: "Manage your gym efficiently",
+                slidingTextAbout2: "Optimize your time and resources",
+                slidingTextAbout3: "Exceed your expectations",
+                slidingTextAbout4: "Maximize your profits",
+                slidingTextAbout5: "Transform your gym's management",
+                slidingTextAbout6: "Improve your clients' experience",
+                slidingTextAbout7: "Facilitate schedule administration",
+                slidingTextAbout8: "All in one place",
+                slidingTextAbout9: "The solution your gym needs",
+                slidingTextAbout10: "Improve payment management",
+                slidingTextAbout11: "Automate your inventory",
+                slidingTextAbout12: "Manage your staff efficiently",
+                slidingTextAbout13: "Optimize your clients' time",
+                slidingTextAbout14: "Manage payments and members easily",
+                slidingTextAbout15: "All from a single platform",
+                ctaStrokeText: "CHOOSE!",
+                ctaTitle: "PLAN",
+                ctaDescription: "Improve your gym's management. <br> Enhance your clients' experience and increase your revenue.",
+                choosePlanButton: "CHOOSE A PLAN",
+                footerLocationContactTitle: "LOCATION & CONTACT",
+                footerLocationLabel: "LOCATION:",
+                footerAddressDetails: "Collique, Comas, Peru",
+                footerEmailLabel: "Email:",
+                footerHoursLabel: "Opening Hours:",
+                footerHoursDetails: "Monday-Saturday: 24/7",
+                footerKnowUsTitle: "ABOUT US",
+                footerAboutUs: "About Us",
+                footerPlans: "Plans",
+                footerContactUs: "Contact Us",
+                footerSocialTitle: "SOCIAL",
+                footerDescription: "Managing your gym has never been easier. With our platform, you manage payments, memberships, and much more with just a few clicks.",
+                copyright: "Copyright 2024, All Rights Reserved",
+                pageTitleContactUs: "Contact Us",
+                contactUsBreadcrumb: "Contact Us",
+                contactDetailsTitle: "LOCATION AND CONTACT",
+                contactDetailsDescription: "Contact us today and discover how our web application for gym administration can simplify your gym's operations. From inventory management, payments, schedules, staff, and clients, we offer an all-in-one solution to efficiently manage your gym.",
+                addressTitle: "Address: ",
+                addressDetails: "Santo Toribio de Mogrovejo 133, Collique, Comas, Lima, Peru",
+                emailTitle: "Email: ",
+                emailDetails: "contacto@fitmanager.com.pe",
+                phoneTitle: "Phone Number:",
+                phoneDetails: "(+51) 51 998 265 700",
+                hoursTitle: "Opening Hours: ",
+                hoursDetails: "Monday to Sunday: 24 hours",
+                howCanWeHelpTitle: "How can we help you?",
+                namePlaceholder: "write your name...",
+                emailPlaceholder: "example@gmail.com",
+                phonePlaceholder: "(51) 555-0120",
+                messagePlaceholder: "write a message...",
+                sendMessageButton: "SEND MESSAGE",
+                // New translations for the schedule page
+                pageTitleSchedule: "Schedule",
+                scheduleBreadcrumb: "Schedule",
+                monday: "Monday",
+                tuesday: "Tuesday",
+                wednesday: "Wednesday",
+                thursday: "Thursday",
+                friday: "Friday",
+                saturday: "Saturday",
+                sunday: "Sunday",
+                functionalTraining: "Functional Training",
+                profJuanPerez: "Professor Juan Pérez",
+                cardio: "Cardio",
+                profRobertoGarcia: "Professor Roberto García",
+                boxing: "Boxing",
+                craze: "Craze",
+                yoga: "Yoga",
+                profAnaLopez: "Professor Ana López",
+                zumba: "Zumba",
+                profLauraMartinez: "Professor Laura Martínez",
+                bootcamp: "Bootcamp",
+                profMariaGarcia: "Professor María García",
+                sculpt: "Sculpt",
+                spin: "Spin",
+                toneUp: "Tone Up",
+                mrRodri: "Mr. Rodri",
+                muscle: "Muscle",
+                stretch: "Stretch",
+                workout: "Workout",
+                profThompson: "Professor Thompson",
+                hiit: "HIIT",
+                profBlancaWhite: "Professor Blanca White",
+                rhythm: "Rhythm",
+                drPatel: "Dr. Patel",
+                power: "Power",
+                profWilson: "Professor Wilson",
+                profClark: "Professor Clark",
+                dmayhem: "DMAYHEM",
+                coachTaylor: "Coach Taylor"
+            }
+        };
+
+        // Function to set the language
+        function setLanguage(lang) {
+            // Update the lang attribute of the html tag
+            document.documentElement.lang = lang;
+
+            // Update all elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+
+            // Update placeholder attributes
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-i18n-placeholder');
+                if (translations[lang] && translations[lang][key]) {
+                    element.placeholder = translations[lang][key];
+                }
+            });
+
+            // Update the site title in the <title> tag
+            const titleElement = document.querySelector('title');
+            if (titleElement && translations[lang] && translations[lang]['siteTitle']) {
+                titleElement.textContent = translations[lang]['siteTitle'];
+            }
+        }
+
+        // Set default language on page load (e.g., from browser preference or 'es')
+        document.addEventListener('DOMContentLoaded', () => {
+            const userLang = navigator.language.split('-')[0]; // Get browser's language (e.g., 'es', 'en')
+            const initialLang = translations[userLang] ? userLang : 'es'; // Default to Spanish if browser language not found
+            document.getElementById('language-switcher').value = initialLang;
+            setLanguage(initialLang);
+        });
+    </script>
 </body>
 
 </html>
